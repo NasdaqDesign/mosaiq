@@ -70,5 +70,5 @@ $campaignData = new WPAlchemy_MetaBox(array
   'types' => array('campaign'),
   'context' => 'normal', // same as above, defaults to "normal"
   'priority' => 'high', // same as above, defaults to "high"
-  'template' => get_stylesheet_directory() . '/library/_prodaq/campaign/campaign-base.php'
+  'template' => get_template_directory() . '/library/_prodaq/campaign/campaign-base.php'
 ));

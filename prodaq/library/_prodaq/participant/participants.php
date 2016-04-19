@@ -81,5 +81,5 @@ $participantData = new WPAlchemy_MetaBox(array
   'types' => array('participant'),
   'context' => 'normal', // same as above, defaults to "normal"
   'priority' => 'high', // same as above, defaults to "high"
-  'template' => get_stylesheet_directory() . '/library/_prodaq/participant/participant-base.php'
+  'template' => get_template_directory() . '/library/_prodaq/participant/participant-base.php'
 ));
