@@ -6,7 +6,7 @@ This is a Wordpress theme. You will need to have a Wordpress site running to ins
 
 ## Installation
 * Download and save the `prodaq/` and `prodaq-child` directories to your sites `wp-content/themes` directory.
-* Activate the Prodaq Child theme
+* Activate the ~~Prodaq Child~~ Prodaq theme (We have a bug at the moment we are working to fix. For now, use the parent theme)
 * Set permalinks to Post Name inside `Settings/Permalinks`
 * Import sample data using the `resources/sample-data.xml`
 * Set the home page to be static by going to `Settings/Reading`, choosing the "A static page" radio and picking "Home" from the dropdown
@@ -14,6 +14,7 @@ This is a Wordpress theme. You will need to have a Wordpress site running to ins
 
 ## Customizing the Theme
 To make this easy to update and add new features, we have built the theme as a child theme that inherits from a parent theme. Any customization should be made in `prodaq-child`. This will allow us to make changes to the parent `prodaq` theme without overriding your customizations.
+(We have a bug at the moment we are working to fix. For now, use the parent theme.)
 
 ### Your Logo
 The default theme is pulling the logo files from `prodaq/library/images/newlogo.png` and `prodaq/library/images/newlogo-dark.png`. It is expecting these logos to be 120x37px. To use your logo, you may save your logo with these same dimensions and the same file names as above. Alternatively, you can alter the CSS to point to your file path instead of `newlogo.png` and `newlogo-dark.png`.
