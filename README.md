@@ -5,16 +5,10 @@
 This is a Wordpress theme. You will need to have a Wordpress site running to install the theme. 
 
 ## Installation
-* Download this repository and save it to `wp-content/themes/prodaq`
-
-(In example case, root is ndaq.pd and vhosts are all configured)
-
-* Setup a db by going to the databases tab of ndaqpd.dev/phpmyadmin. Create a db named `ndaq` with collation set to `utf8_unicode_ci`. This is being referenced in the `wp-config.php`.
-* If you named your root directory anything other than `ndaq.pd`, head to the `wp-config.php` file and update the host to the name of your root. If you named your db anything different, be sure to update that as well.
-* Proceed to `ndaq.pd/work/wp-admin` to install Wordpress.
-* Activate Prodaq theme if not active (should be default in /wp-includes/default-constants)
+* Download and save the `prodaq/` and `prodaq-child` directories to your sites `wp-content/themes` directory.
+* Activate the Prodaq Child theme
 * Set permalinks to Post Name: `http://ndaq.pd/work/sample-post/` inside `Settings/Permalinks`
-* Import db data via (links coming soon...)
+* Import sample data using the [XML file](../resources/sample-data.xml)
 
 #### Troubleshooting
 * If you have trouble installing plugins, or updating Wordpress locally, there are a number of resources out there. I'll try to list some here.
