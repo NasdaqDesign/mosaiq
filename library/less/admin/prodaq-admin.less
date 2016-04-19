@@ -1,0 +1,135 @@
+@import '../prodaq/import.less';
+@import 'meta'; // all metabox styles
+
+
+html, body{
+	background:@graybg;
+}
+
+.post-type-participant,
+.post-type-persona{
+	.wp-list-table{
+		.column-featured_image{
+			width: 100px;
+		}
+	}
+}
+
+#adminmenuback,
+#adminmenu,
+#adminmenuwrap{
+	background-color:#2d303a;
+}
+
+#wp-content-editor-tools{
+	background: @graybg;
+}
+#dashboard-widgets-wrap{
+	overflow: visible;
+}
+#adminmenu{
+	li.wp-has-current-submenu{
+		.wp-submenu{
+			background-color: #1d1f25;
+
+		}
+		a.wp-has-current-submenu{
+			background: #1d1f25;
+			color:@blue;
+		}
+	}
+	.menu-icon-persona {
+		background: darken(@darkBlue, 4%);
+		div.wp-menu-image:before {
+			content: "\f337";
+			color: @blue;
+		}
+	}
+	.menu-icon-campaign {
+		background: darken(@darkBlue, 4%);
+		div.wp-menu-image:before {
+			content: "\f183";
+			color: @blue;
+		}
+	}
+	.menu-icon-question {
+		background: darken(@darkBlue, 4%);
+		div.wp-menu-image:before {
+			content: "\f130";
+			color: @blue;
+		}
+	}
+	.menu-icon-product {
+		background: darken(@darkBlue, 4%);
+		div.wp-menu-image:before {
+			content: "\f115";
+			color: @blue;
+		}
+	}
+	.menu-icon-report {
+		background: darken(@darkBlue, 4%);
+		border-bottom: 1px solid darken(@darkBlue, 8%);
+		div.wp-menu-image:before {
+			content: "\f180";
+			color: @blue;
+		}
+	}
+	.menu-icon-quote {
+		background: darken(@darkBlue, 4%);
+		border-bottom: 1px solid darken(@darkBlue, 8%);
+		div.wp-menu-image:before {
+			content: "\f122";
+			color: @blue;
+		}
+	}
+	
+	li.menu-icon-participant {
+		background: darken(@darkBlue, 4%);
+		border-top: 1px solid darken(@darkBlue, 8%);
+		margin-top: 10px;
+
+		div.wp-menu-image:before {
+			content: "\f307";
+			color: @blue;
+		}
+	}
+
+	li.menu-icon-iteration {
+		background: darken(@darkBlue, 4%);
+
+		div.wp-menu-image:before {
+			content: "\f232";
+			color: @blue;
+		}
+	}
+}
+#wpadminbar{
+	background: #2d303a;
+}
+
+
+
+.select2-container.cuztom-input.cuztom-select{
+	width: 200px;
+}
+
+
+
+.select2-results .select2-no-results{
+	background: #2d303a;
+}
+.select2-search-choice-close{
+	background-image: none!important;
+}
+.select2-search{
+	background-image: none!important;
+}
+
+
+.skin-daq(select2-daq, #2d303a, #2d303a, #fff);
+
+.cmb-td{
+	.select2-container{
+		width: 50%;
+	}
+}

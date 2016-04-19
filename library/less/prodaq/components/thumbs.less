@@ -1,0 +1,45 @@
+ul.persona-list,
+ul.participant-list{
+	padding: 0;
+	li{
+		text-align: center;
+		list-style: none;
+		min-height: 255px;
+		&:hover{
+			.thumb__wrapper{
+				border-color:@white;
+			}
+		}
+
+		.thumb__wrapper{
+			width: 125px;
+			height: 125px;
+			.rounded(50%);
+			overflow:hidden;
+			margin: 0 auto;
+			border: 3px solid @graybg;
+			background: @white;
+			.transition(.25s, ease);
+			.helper {
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+			}
+			img{
+				vertical-align: middle;
+				width: 100%;
+				max-width: 125px;
+				max-height: 125px;
+			}
+		}
+
+
+		.participant__assets{
+			li{
+				display: inline;
+				margin: 0 15px;
+				font-size: 18px;
+			}
+		}
+	}
+}

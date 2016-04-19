@@ -1,0 +1,70 @@
+// Styles for Participant Post
+/** Campaign Related Styles **/
+
+.participant__content{
+  position:relative;
+  .participant__header{
+    height: 150px;
+  }
+
+  .participant__thumb{
+    width: 130px;
+    height: 130px;
+    overflow:hidden;
+    .rounded(50%);
+    margin-top: -65px;
+    background: @white;
+    img{
+      width: 100%;
+      height: auto;
+      max-width: 130px;
+      max-height: 130px;
+      vertical-align: middle;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+  dl{
+    margin-bottom: 10px;
+  }
+  .participant__meetings{
+    padding-top: 30px;
+    li{
+      margin-bottom: 50px;
+      position: relative;
+      list-style: none;
+    }
+    .quote{
+      font-style: italic;
+    }
+    .meeting__recording audio{
+      width: 100%;
+    }
+
+    .download-transcript{
+      position: absolute;
+      top: 24px;
+      left: -40px;
+      font-size: 20px;
+    }
+    .download-recording{
+      position: absolute;
+      top: 60px;
+      left: -38px;
+      font-size: 20px;
+    }
+  }
+  .participant__contact{
+    padding: 15px 0;
+    li{
+      list-style:none;
+      line-height: 30px;
+      i{
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

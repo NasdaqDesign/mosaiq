@@ -1,0 +1,12 @@
+{"companySizes": [
+	{"code":"A","description":"Self-employed"},
+	{"code":"B","description":"1-10 employees"},
+	{"code":"C","description":"11-50 employees"},
+	{"code":"D","description":"51-200 employees"},
+	{"code":"E","description":"201-500 employees"},
+	{"code":"F","description":"501-1000 employees"},
+	{"code":"G","description":"1001-5000 employees"},
+	{"code":"H","description":"5001-10,000 employees"},
+	{"code":"I","description":"10,001+ employees"}
+	]
+}

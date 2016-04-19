@@ -1,0 +1,64 @@
+//Working with the plugin, these have to be overrides :(
+.asp_image{
+	border-radius: 50%!important;
+}
+.probox{
+	border-bottom: 2px solid #ccc!important;
+}
+.proinput{
+	margin-left: 0!important;
+}
+.asp_group_header{
+	background: transparent!important;
+	padding: 15px 0!important;
+	border: 0!important;
+	font-size: 14px!important;
+	color: #555!important;
+	font-weight: lighter!important;
+}
+.ajaxsearchpro{
+	background: transparent!important;
+}
+.asp_result_pagepost{
+	padding: 20px 10px!important;
+	.asp_content br + span{
+		text-transform: uppercase;
+	}
+}
+.asp_spacer{
+	background:#eee!important;
+}
+
+
+
+
+//our search frame
+.search__bg{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	overflow-y:scroll;
+	display: none;
+	opacity: 0;
+	animation: fadeAfterDisplay 1s;
+	-webkit-animation: fadeAfterDisplay 1s;
+	top: 0;
+	left: 0;
+	background: rgba(245, 245, 245, .9);
+	z-index: 1020;
+	&.active{
+		display: block;
+		opacity: 1;
+		animation: fadeAfterDisplay 1s;
+		-webkit-animation: fadeAfterDisplay 1s;
+	}
+	.search__wrapper{
+		padding-top: 150px;
+		.caps{
+			text-transform: uppercase;
+		}
+		h1{
+			line-height: 50px;
+		}
+	}
+}
