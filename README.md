@@ -8,7 +8,7 @@ This is a Wordpress theme. You will need to have a Wordpress site running to ins
 * Download and save the `prodaq/` and `prodaq-child` directories to your sites `wp-content/themes` directory.
 * Activate the Prodaq Child theme
 * Set permalinks to Post Name inside `Settings/Permalinks`
-* Import sample data using the `resources/sample-data.xml`
+* Import sample data using the `resources/sample-data.xml`. You will want to use the Wordpress importer plugin for this task.
 * Set the home page to be static by going to `Settings/Reading`, choosing the "A static page" radio and picking "Home" from the dropdown
 * Create the main navigation by going to `Apperance/Menus`. The "Main" menu should already be in place, you just need to check the theme locations "The Main Menu" checkbox in the Menu Settings section and save.
 
