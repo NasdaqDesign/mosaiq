@@ -1,5 +1,6 @@
 
-# Research Asset Management Platform
+# Mosaiq
+Research Asset Management Platform
 
 ## Prerequisites
 This is a Wordpress theme. You will need to have a Wordpress site running to install the theme. 
