@@ -20,8 +20,6 @@ function prodaq_scripts_and_styles(){
   wp_register_script( 'isotope', 					$libs . 'isotope.pkgd.min.js', array(), '2.2.0', true );
   wp_register_script( 'progressbar', 			$libs . 'progressbar.min.js', array(), '0.9.0', true );
   wp_register_script( 'slick', 						$libs . 'slick.min.js', array(), '1.3.7', true );
-  wp_register_script( 'stellar', 					$libs . 'jquery.stellar.min.js', array(), '0.6.2', true );
-  wp_register_script( 'wow', 							$libs . 'wow.min.js', array(), '1.1.2', true );
   wp_register_script( 'select2-js', 			$libs . 'select2.min.js', 'jquery', '3.5.4', true);
 
 
@@ -31,15 +29,10 @@ function prodaq_scripts_and_styles(){
   // Page or post specific
   wp_register_script( 'campaign', 				$prodaq . 'campaign-min.js', array('isotope', 'daq-isotope', 'hideseek'), false, true);
   wp_register_script( 'daq-isotope', 			$prodaq . 'daq-isotope-min.js', array(), false, true );
-  wp_register_script( 'findings', 				$prodaq . 'findings-min.js', array('fullPage'), false, true );
   wp_register_script( 'persona', 					$prodaq . 'persona-min.js', array('isotope', 'daq-isotope'), false, true );
   wp_register_script( 'product', 					$prodaq . 'product-min.js', array('fancybox', 'slick'), false, true);
   wp_register_script( 'stats', 						$prodaq . 'stats-min.js', array('isotope', 'daq-isotope', 'progressbar', 'select2-js'), false, true );
   wp_register_script( 'story', 						$prodaq . 'story-min.js', array('fullPage'), false, true );
-
-
-  wp_enqueue_script( 'stellar' );
-  wp_enqueue_script( 'wow' );
 
 
   wp_enqueue_script('core');
@@ -61,9 +54,6 @@ function prodaq_scripts_and_styles(){
   }
   if($post_type == 'product' || is_post_type_archive('product')){
     wp_enqueue_script('product');
-  }
-  if($post_type == 'report'){
-    wp_enqueue_script('findings');
   }
   if($post_type == 'campaign' || is_post_type_archive('campaign')){
     wp_enqueue_script('campaign');
