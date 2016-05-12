@@ -6,12 +6,12 @@ Research Asset Management Platform
 This is a Wordpress theme. You will need to have a Wordpress site running to install the theme. 
 
 ## Installation
-* Download and save the `prodaq/` and `prodaq-child` directories to your sites `wp-content/themes` directory.
+* Download and save the `prodaq/` and `prodaq-child/` directories to your sites `wp-content/themes` directory.
 * Activate the Prodaq Child theme
-* Set permalinks to Post Name inside `Settings/Permalinks`
 * Import sample data using the `resources/sample-data.xml`. You will want to use the Wordpress importer plugin for this task.
 * Set the home page to be static by going to `Settings/Reading`, choosing the "A static page" radio and picking "Home" from the dropdown
 * Create the main navigation by going to `Apperance/Menus`. The "Main" menu should already be in place, you just need to check the theme locations "The Main Menu" checkbox in the Menu Settings section and save.
+* _OPTIONAL_ Set permalinks to Post Name inside `Settings/Permalinks`
 
 ## Customizing the Theme
 To make this easy to update and add new features, we have built the theme as a child theme that inherits from a parent theme. Any customization should be made in `prodaq-child`. This will allow us to make changes to the parent `prodaq` theme without overriding your customizations.
