@@ -78,14 +78,6 @@ function remove_prodaq_menus(){
 }
 add_action('admin_menu', 'remove_prodaq_menus');
 
-
-include( '_prodaq/cuztom/cuztom.php' ); // fallback for shittier metaboxes
-// Iframe page
-include( '_prodaq/iframe.php' );
-
-// Work with us page
-include( '_prodaq/work.php' );
-
 /* We dont' need the editor since we're using custom metaboxes */
 add_action( 'init', 'hide_editor' );
 function hide_editor() {
