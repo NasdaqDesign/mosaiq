@@ -121,8 +121,6 @@ get_header();
 						echo '<strong>' . get_the_title() . '</strong>';
 						echo '</li>';
 
-						// don't need this right now
-						//include( get_template_directory() . '/includes/stats/json.php');
 					endwhile;
 					echo '</ul>'; ?>
 				</div>

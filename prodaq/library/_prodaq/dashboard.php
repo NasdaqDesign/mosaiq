@@ -10,7 +10,7 @@
 			<a href="post-new.php?post_type=persona" class="btn">New Persona</a>
 
 			<div class="participant__search">
-				<input id="search-participants" type="text" placeholder="Search Partypants" data-toggle="hideseek" data-list=".participant-list" data-ignore=".ignore" data-nodata="No participants found">
+				<input id="search-participants" type="text" placeholder="Search Participants" data-toggle="hideseek" data-list=".participant-list" data-ignore=".ignore" data-nodata="No participants found">
 				<ul class="participant-list">
 					<?php
 						global $post;
@@ -72,8 +72,6 @@
 					<span>Data</span>
 					<ul>
 						<li><a href="#" data-target="wpalchemy">WPAlchemy</a></li>
-						<li><a href="#" data-target="search">Ajax Search</a></li>
-						<li><a href="#" data-target="directory">Directory</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -179,112 +177,6 @@
 					</li>
 					<li>_persona_connections - single</li>
 					<li>_persona_notes - single</li>
-				</ul>
-			</div>
-			<div class="documentation__pane" id="product">
-				<h2>Products</h2>
-				<h4>Keys</h4>
-				<ul class="data-keys">
-					<li>_product_description - single</li>
-					<li>_product_our_goals - single</li>
-					<li>_product_biz_goals - single</li>
-					<li>_product_team - array
-						<ul>
-							<li>name - single</li>
-							<li>email - single</li>
-							<li>role - single</li>
-							<li>current - single</li>
-						</ul>
-					</li>
-					<li>_product_product_audience - single</li>
-					<li>_product_personas - multi</li>
-					<li>_product_participants - multi</li>
-					<li>_product_competitors - array
-						<ul>
-							<li>name - single</li>
-							<li>name - single</li>
-						</ul>
-					</li>
-					<li>_product_competitor_summary - single</li>
-					<li>_product_size - single</li>
-					<li>_product_site - single</li>
-					<li>_product_git - single</li>
-					<li>_product_basecamp - single</li>
-					<li>_product_images - array
-						<ul>
-							<li>image - single</li>
-							<li>caption - single</li>
-						</ul>
-					</li>
-					<li>_product_docs - array
-						<ul>
-							<li>title - single</li>
-							<li>document - single</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="documentation__pane" id="iteration">
-				<h2>Iterations</h2>
-				<h4>Keys</h4>
-				<ul class="data-keys">
-					<li>_iteration_type - single</li>
-					<li>_iteration_next - single</li>
-					<li>_iteration_approach - single</li>
-					<li>_iteration_participants - multi</li>
-					<li>_iteration_images - array
-						<ul>
-							<li>image - single</li>
-							<li>annotation_array - array
-								<ul>
-									<li>id - single</li>
-									<li>heading - single</li>
-									<li>annotation - single</li>
-									<li>xperc - single</li>
-									<li>yperc - single</li>
-								</ul>
-							</li>
-							<li>quotes - multi</li>
-						</ul>
-					</li>
-					<li>_iteration_takeaway - single</li>
-					<li>_iteration_quotes - multi</li>
-
-				</ul>
-			</div>
-			<div class="documentation__pane" id="report">
-				<h2>Reports</h2>
-				<h4>Keys</h4>
-				<ul class="data-keys">
-					<li>_report_researchers - single</li>
-					<li>_report_research_goals - single</li>
-					<li>_report_approach - single</li>
-					<li>_report_audience - single</li>
-					<li>_report_methodology - single</li>
-					<li>_report_themes - array
-						<ul>
-							<li>theme - single</li>
-							<li>description - single</li>
-						</ul>
-					</li>
-					<li>_report_participants - multi</li>
-					<li>_report_quotes - multi</li>
-					<li>_report_images - array
-						<ul>
-							<li>image - single</li>
-							<li>annotation_array - array
-								<ul>
-									<li>id - single</li>
-									<li>heading - single</li>
-									<li>annotation - single</li>
-									<li>xperc - single</li>
-									<li>yperc - single</li>
-								</ul>
-							</li>
-							<li>quotes - multi</li>
-						</ul>
-					</li>
-					<li>_report_next_steps - single</li>
 				</ul>
 			</div>
 			<div class="documentation__pane" id="wpalchemy">
