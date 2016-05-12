@@ -25,10 +25,10 @@ function generateCampaign($campaignPost) {
 						$participantinfo = get_page_by_title($participant, OBJECT, 'participant');
 						echo '<li>';
 						if(has_post_thumbnail($participantinfo->ID)){
-						echo get_the_post_thumbnail($participantinfo->ID, 'participant-small');
+							echo get_the_post_thumbnail($participantinfo->ID, 'participant-small');
 						}
 						else{
-						echo '<img width="36px" src="' .  get_stylesheet_directory_uri() . '/library/images/blank.jpg">';
+							echo '<img width="36px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
 						}
 						echo '</li>';
 					}

@@ -1471,7 +1471,7 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_participant_meetings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:18:"interview_campaign";s:2:"30";s:5:"notes";s:224:"<p>Synergistically evolve 2.0 technologies rather than just in time initiatives. Quickly deploy strategic networks with compelling e-business. Credibly pontificate highly efficient manufactured products and enabled data.</p>";}}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:11:"meetingdate";s:20:"Wednesday, Nov 04 2015";s:18:"interview_campaign";s:2:"30";s:5:"notes";s:224:"<p>Synergistically evolve 2.0 technologies rather than just in time initiatives. Quickly deploy strategic networks with compelling e-business. Credibly pontificate highly efficient manufactured products and enabled data.</p>";}}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_participant_quotes]]></wp:meta_key>

@@ -95,7 +95,8 @@ get_header();
 
 						echo '<li class="isotope-list__item participant__stat ' . $classStr .'">';
 						echo '<div class="progress-meter" id="progress-'. $participantCount . '" data-complete="'. $completeness . '">';
-						echo '<a class="participant-wrapper" data-toggle="tooltip" href="/wp-admin/post.php?post='. get_the_id() . '&action=edit" title="';
+						$theHref = is_user_logged_in() ? admin_url() . 'post.php?post='. get_the_id() . '&action=edit' : get_the_permalink();
+						echo '<a class="participant-wrapper" data-toggle="tooltip" href="'. $theHref . '" title="';
 						if(empty($incompleteArr)) {
 							echo "Complete!";
 						}
@@ -111,10 +112,9 @@ get_header();
 						echo '">';
 						if(has_post_thumbnail(get_the_ID())){
 							echo get_the_post_thumbnail(get_the_ID(), 'participant-small');
-							//echo '<img width="30px" src="' .  get_stylesheet_directory_uri() . '/library/images/blank.jpg">';
 						}
 						else{
-							echo '<img width="30px" src="' .  get_stylesheet_directory_uri() . '/library/images/blank.jpg">';
+							echo '<img width="30px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
 						}
 						echo '</a>';
 						echo '</div>';

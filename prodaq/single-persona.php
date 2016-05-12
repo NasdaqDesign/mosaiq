@@ -31,6 +31,9 @@ get_header(); ?>
 
         </div>
       </div>
+      <?php if (is_user_logged_in()) {
+        echo '<a class="btn btn--edit" href="' . admin_url() . 'post.php?post='. get_the_id() . '&action=edit">Edit</a>';
+      } ?>
     </div>
   </header>
 

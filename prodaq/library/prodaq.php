@@ -130,3 +130,15 @@ function change_default_title( $title ){
 		return $title;
 }
 add_filter( 'enter_title_here', 'change_default_title' );
+
+function get_asset_if_exists($asset) {
+	if(file_exists(get_stylesheet_directory() . $asset)) {
+		return get_stylesheet_directory_uri() . $asset;
+	}
+	else if(file_exists(get_template_directory() . $asset)){
+		return get_template_directory_uri() . $asset;
+	}
+	else {
+		return "";
+	}
+}
