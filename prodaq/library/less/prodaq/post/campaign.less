@@ -12,6 +12,12 @@
         font-size: 24px;
       }
     }
+    
+    .btn--edit {
+      top: auto;
+      bottom: 10px;
+      z-index: 5;
+    }
     .campaign__meta{
       color: #ccc;
       padding-top: 30px;
@@ -154,6 +160,16 @@
             display: inline;
             margin: 0 15px;
             font-size: 18px;
+            position: relative;
+            
+            .badge {
+              background-color: @blue;
+              font-size: 10px;
+              padding: 2px 4px;
+              position: absolute;
+              top: -7px;
+              right: -10px;
+            }
           }
         }
       }
@@ -171,6 +187,9 @@
   &--active {
     background: @white;
     border-top: 5px solid #d3d7dd;
+  }
+  &--inactive {
+    padding-bottom: 60px;
   }
 
   .participant-tag{

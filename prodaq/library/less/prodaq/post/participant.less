@@ -1,7 +1,11 @@
 // Styles for Participant Post
 /** Campaign Related Styles **/
 
-.participant__content{
+.participant { 
+  padding-bottom: 60px;
+}
+
+ .participant__content{
   position:relative;
   .participant__header{
     height: 150px;
@@ -42,19 +46,6 @@
     .meeting__recording audio{
       width: 100%;
     }
-
-    .download-transcript{
-      position: absolute;
-      top: 24px;
-      left: -40px;
-      font-size: 20px;
-    }
-    .download-recording{
-      position: absolute;
-      top: 60px;
-      left: -38px;
-      font-size: 20px;
-    }
   }
   .participant__contact{
     padding: 15px 0;
@@ -67,4 +58,16 @@
     }
   }
 
+}
+
+.participant__assets-container {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 20px;
+  
+  a {
+    display: block;
+    position: relative;
+  }
 }

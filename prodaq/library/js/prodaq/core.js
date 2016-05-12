@@ -156,7 +156,7 @@
     */
 
     $('#bgvid, .navbar-main').animate({opacity: '1'}, 250);
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip({container: 'body'});
 
     // Navbar Stuff
     // ------------------------------------------------------------------------------------------
