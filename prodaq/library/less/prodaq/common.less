@@ -199,5 +199,23 @@ ul.filters{
 select.filters{
 	width: 100%;
 	margin-bottom: 15px;
-
 }
+
+.container {
+	position: relative;
+}
+
+.btn--edit {
+	background-color: @brand-primary;
+	color: @white;
+	padding: 3px 6px;
+	
+	position: absolute;
+	right: 0;
+	top: 5px;
+	
+	&:hover {
+		background-color: darken(@link-color, 15%);
+		color: @white;
+	}
+ }
