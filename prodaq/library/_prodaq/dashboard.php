@@ -10,7 +10,7 @@
 			<a href="post-new.php?post_type=persona" class="btn">New Persona</a>
 
 			<div class="participant__search">
-				<input id="search-participants" type="text" placeholder="Search Partypants" data-toggle="hideseek" data-list=".participant-list" data-ignore=".ignore" data-nodata="No participants found">
+				<input id="search-participants" type="text" placeholder="Search Participants" data-toggle="hideseek" data-list=".participant-list" data-ignore=".ignore" data-nodata="No participants found">
 				<ul class="participant-list">
 					<?php
 						global $post;
