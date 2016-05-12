@@ -12,11 +12,6 @@
 
 		</footer> <!-- end footer -->
 
-		<?php
-			// if ( is_user_logged_in()==false ) :
-				include (TEMPLATEPATH . '/includes/modals/modal-login.php');
-			// endif;
-		?>
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php wp_footer(); ?>
 
