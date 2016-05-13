@@ -168,7 +168,6 @@
 						$my_query = null;
 						$my_query = new WP_Query($args);
 						if( $my_query->have_posts() ) {
-							//fuck yeah. $post->ID worked and get_the_ID() and variables didn't.. took me way to long to figure out despite both being valid... perhaps one not being speicifc to global post vs this post
 							while ($my_query->have_posts()) : $my_query->the_post();?>
 								<option value="<?php echo $post->ID; ?>"<?php $mb->the_select_state($post->ID); ?>><?php echo $post->post_title; ?></option>
 							<?php	endwhile;
@@ -196,7 +195,6 @@
 						$my_query = null;
 						$my_query = new WP_Query($args);
 						if( $my_query->have_posts() ) {
-							//fuck yeah. $post->ID worked and get_the_ID() and variables didn't.. took me way to long to figure out despite both being valid... perhaps one not being speicifc to global post vs this post
 							while ($my_query->have_posts()) : $my_query->the_post();?>
 								<option value="<?php echo $post->ID; ?>"<?php $mb->the_select_state($post->ID); ?>><?php echo $post->post_title; ?></option>
 							<?php	endwhile;
