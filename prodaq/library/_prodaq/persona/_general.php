@@ -24,11 +24,6 @@
 			</div>
 
 			<div class="form-group">
-				<label>Original URL</label>
-				<?php $mb->the_field('url'); ?>
-				<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
-			</div>
-			<div class="form-group">
 				<?php $mb->the_field('quote'); ?>
 				<label>Quote</label>
 				<textarea name="<?php $mb->the_name(); ?>" rows="3"><?php $mb->the_value(); ?></textarea>
