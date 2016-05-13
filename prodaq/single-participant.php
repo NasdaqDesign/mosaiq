@@ -26,6 +26,9 @@ get_header(); ?>
               echo '<img width="130px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
             } ?>
           </div>
+          <?php if (is_user_logged_in()) {
+            echo '<a class="btn btn--edit" href="' . admin_url() . 'post.php?post='. get_the_id() . '&action=edit">Edit</a>';
+          } ?>
           <?php include(TEMPLATEPATH . '/includes/participant/participant-details.php'); ?>
 
         </div>
@@ -36,9 +39,6 @@ get_header(); ?>
         </div>
 
       </div>
-      <?php if (is_user_logged_in()) {
-        echo '<a class="btn btn--edit" href="' . admin_url() . 'post.php?post='. get_the_id() . '&action=edit">Edit</a>';
-      } ?>
     </div>
   </div>
 
