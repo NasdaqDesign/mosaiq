@@ -19,9 +19,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="robots" content="noindex">
 
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png?v=2">
+		<link rel="apple-touch-icon" sizes="57x57" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-57x57.png');?>">
+		<link rel="apple-touch-icon" sizes="60x60" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-60x60.png');?>">
+		<link rel="apple-touch-icon" sizes="72x72" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-72x72.png');?>">
+		<link rel="apple-touch-icon" sizes="76x76" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-76x76.png');?>">
+		<link rel="apple-touch-icon" sizes="114x114" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-114x114.png');?>">
+		<link rel="apple-touch-icon" sizes="120x120" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-120x120.png');?>">
+		<link rel="apple-touch-icon" sizes="144x144" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-144x144.png');?>">
+		<link rel="apple-touch-icon" sizes="152x152" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-152x152.png');?>">
+		<link rel="apple-touch-icon" sizes="180x180" href="<?=get_asset_if_exists('/library/images/favicons/apple-touch-icon-180x180.png');?>">
+		<link rel="icon" type="image/png" href="<?=get_asset_if_exists('/library/images/favicons/favicon-32x32.png');?>" sizes="32x32">
+		<link rel="icon" type="image/png" href="<?=get_asset_if_exists('/library/images/favicons/android-chrome-192x192.png');?>" sizes="192x192">
+		<link rel="icon" type="image/png" href="<?=get_asset_if_exists('/library/images/favicons/favicon-96x96.png');?>" sizes="96x96">
+		<link rel="icon" type="image/png" href="<?=get_asset_if_exists('/library/images/favicons/favicon-16x16.png');?>" sizes="16x16">
+		<link rel="manifest" href="<?=get_asset_if_exists('/library/images/favicons/manifest.json');?>">
+		<link rel="mask-icon" href="<?=get_asset_if_exists('/library/images/favicons/safari-pinned-tab.svg');?>" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="<?=get_asset_if_exists('/library/images/favicons/mstile-144x144.png');?>">
+		<meta name="theme-color" content="#ffffff">
+
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
