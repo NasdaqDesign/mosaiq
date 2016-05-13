@@ -1,7 +1,6 @@
 // Functions accessible to various scripts
 // Do these really need to be separate files? I like keeping functions in one place even if they aren't all used on the same page. plus we can use this as global file and move things into their own files once they require it.
 (function($){
-  new WOW().init();
   //If you ever need to hide the nav and footer for 'fullscreen'
   hideNav = function(wrapper, timer){
     setTimeout(function(){
