@@ -28,7 +28,7 @@ function generateCampaign($campaignPost) {
 							echo get_the_post_thumbnail($participantinfo->ID, 'participant-small');
 						}
 						else{
-							echo '<img width="36px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
+							echo '<img width="36px" src="' . get_asset_if_exists("/library/images/blank.jpg") . '">';
 						}
 						echo '</li>';
 					}

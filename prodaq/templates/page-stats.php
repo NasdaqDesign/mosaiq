@@ -114,7 +114,7 @@ get_header();
 							echo get_the_post_thumbnail(get_the_ID(), 'participant-small');
 						}
 						else{
-							echo '<img width="30px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
+							echo '<img width="30px" src="' . get_asset_if_exists("/library/images/blank.jpg") . '">';
 						}
 						echo '</a>';
 						echo '</div>';

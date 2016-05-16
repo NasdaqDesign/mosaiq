@@ -1,7 +1,7 @@
 <?php
 /*
-Author: Dan Selden
-URL: danselden.me
+Author: Prodaq
+URL: http://nasdaqdesign.com
 
 Just pulling together all the various functions needed for Prodaq
 */

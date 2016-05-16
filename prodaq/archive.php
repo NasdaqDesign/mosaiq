@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="container">
+		<div class="container">
 
 			<div id="content" class="clearfix row">
 
@@ -68,18 +68,17 @@
 								<section class="entry-content clearfix">
 									<?php the_excerpt(''); ?>
 									<?php wp_link_pages(
-                                		array(
-                                		
-	                                        'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
-	                                        'after' => '</div>'
-                                		) 
-                                	); ?>
+										array(
+											'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
+											'after' => '</div>'
+										) 
+									); ?>
 								</section> <?php // end article section ?>
 
 								<footer class="article-footer clearfix">
 									<span class="tags pull-left"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
-                  					<span class="commentnum pull-right"><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="fa fa-comment"></i> 0', '<i class="fa fa-comment"></i> 1', '<i class="fa fa-comment"></i> %' ); ?></a></span>
-                				</footer> <?php // end article footer ?>
+									<span class="commentnum pull-right"><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="fa fa-comment"></i> 0', '<i class="fa fa-comment"></i> 1', '<i class="fa fa-comment"></i> %' ); ?></a></span>
+								</footer> <?php // end article footer ?>
 
 								<?php // comments_template(); // uncomment if you want to use them ?>
 
@@ -88,7 +87,7 @@
 					<?php endwhile; ?>
 
 							<?php if (function_exists("emm_paginate")) { ?>
-                  <?php emm_paginate(); ?>
+								<?php emm_paginate(); ?>
 							<?php } else { ?>
 								<nav class="wp-prev-next">
 									<ul class="clearfix">
@@ -121,6 +120,6 @@
 
 			</div> <?php // end #content ?>
 
-    </div> <?php // end ./container ?>
+		</div> <?php // end ./container ?>
 
 <?php get_footer(); ?>

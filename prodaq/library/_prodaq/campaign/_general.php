@@ -34,8 +34,6 @@
 				<label>Description</label>
 				<textarea class="ckeditor" name="<?php $mb->the_name(); ?>" rows="8"><?php $mb->the_value(); ?></textarea>
 			</div>
-
-
 		</div>
 		<div class="col-md-6">
 			<h2>Other Details</h2>

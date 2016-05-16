@@ -4,7 +4,7 @@ $participantFields = array('Company', 'City', 'Country', 'Region');
 $incompleteArr = array();
 $totalFields = 0;
 $complete = 0;
-//foreach($participantFields as $field) {
+
 foreach ($participantFields as $fieldKey => &$field) {
 	$totalFields ++;
 	$fieldValue = get_post_meta(get_the_ID(), '_participant_' . strtolower($field), TRUE);

@@ -55,7 +55,6 @@
 			<div class="form-group">
 				<?php $mb->the_field('experience'); ?>
 				<label>Experience Level</label>
-				<!-- codes taken from https://developer.linkedin.com/docs/reference/company-size-codes -->
 				<select class="selectnice" name="<?php $mb->the_name(); ?>">
 					<option value=""></option>
 					<option value="4"<?php $mb->the_select_state('4'); ?>>Less than 5 years</option>

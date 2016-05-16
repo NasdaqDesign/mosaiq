@@ -4,276 +4,276 @@
 // Campaign Single Page
 .campaign{
 
-  .campaign__header{
-    h1{
-      margin: 0;
-      @media @i5{
-        line-height: 36px;
-        font-size: 24px;
-      }
-    }
-    
-    .btn--edit {
-      position: absolute;
-      bottom: 10px;
-      z-index: 5;
-    }
-    .campaign__meta{
-      color: #ccc;
-      padding-top: 30px;
-      text-align:right;
-      z-index: 10;
-      position: relative;
-      @media @i5{
-        padding-top: 0;
-        margin-bottom: 15px;
-        text-align:left;
-      }
-      p{
-        font-size: 14px;
-        line-height: 24px;
-        margin: 0;
-      }
-      a{
-        background:darken(#e3e3e3, 20%);
-        padding: 5px 10px;
-        margin-left: 5px;
-        margin-top: 10px;
-        font-size: 11px;
-        text-transform:uppercase;
-        .rounded(5px);
-        color:@white;
+	.campaign__header{
+		h1{
+			margin: 0;
+			@media @i5{
+				line-height: 36px;
+				font-size: 24px;
+			}
+		}
+		
+		.btn--edit {
+			position: absolute;
+			bottom: 10px;
+			z-index: 5;
+		}
+		.campaign__meta{
+			color: #ccc;
+			padding-top: 30px;
+			text-align:right;
+			z-index: 10;
+			position: relative;
+			@media @i5{
+				padding-top: 0;
+				margin-bottom: 15px;
+				text-align:left;
+			}
+			p{
+				font-size: 14px;
+				line-height: 24px;
+				margin: 0;
+			}
+			a{
+				background:darken(#e3e3e3, 20%);
+				padding: 5px 10px;
+				margin-left: 5px;
+				margin-top: 10px;
+				font-size: 11px;
+				text-transform:uppercase;
+				.rounded(5px);
+				color:@white;
 
-        @media @i5{
-          margin-left: 0;
-          margin-right: 5px;
-        }
-        &:hover{
-          background:@blue;
-          text-decoration:none;
-        }
-      }
-    }
-  }
-  .campaign__overview{
-    padding: 60px 0 80px;
-    font-size: 16px;
-    background:@white;
-    h2{
-      margin: 0;
-      line-height: 80px;
-    }
-  }
-  .campaign__assets{
-    border-top: 1px solid #e3e3e3;
-    overflow: auto;
-    background: @white;
-    span{
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .findings{
-      float: left;
-      width: 25%;
-      border-right: 1px solid #e3e3e3;
-      padding: 25px 0;
-      font-size: 16px;
-      p{
-        color: #888;
-        font-size: 16px;
-        margin: 0;
-        padding: 5px 0;
-      }
-    }
-    .other-assets{
-      width: 75%;
-      float: left;
-      overflow-x: scroll;
-      &.overflow{
-        box-shadow: inset 0 0px 0 0 rgba(0,0,0,0.2),
-        inset -10px 0px 10px -10px rgba(0,0,0,0.2);
-      }
-    }
-    ul{
-      width: 1000px;
-      padding: 25px 0;
-      margin: 0 10px;
-      li{
-        display: inline;
-        margin-right: 10px;
-      }
-    }
-  }
-  .campaign__participants{
-    background:@graybg;
-    padding: 60px 0;
-    .participant-list__header{
-      overflow: auto;
-      margin-bottom: 20px;
-      input{
-        font-size: 16px;
-        padding-left: 5px;
-        width: 250px;
-        margin-top: 25px;
-      }
-    }
-    h2{
-      margin: 0;
-      line-height: 80px;
-    }
-    ul{
-      padding: 0;
-      margin-bottom: 30px;
-      li{
-        text-align: center;
-        list-style: none;
-        min-height: 300px;
-        &:hover{
-          .thumb__wrapper{
-            border-color:@white;
-          }
-        }
+				@media @i5{
+					margin-left: 0;
+					margin-right: 5px;
+				}
+				&:hover{
+					background:@blue;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.campaign__overview{
+		padding: 60px 0 80px;
+		font-size: 16px;
+		background:@white;
+		h2{
+			margin: 0;
+			line-height: 80px;
+		}
+	}
+	.campaign__assets{
+		border-top: 1px solid #e3e3e3;
+		overflow: auto;
+		background: @white;
+		span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.findings{
+			float: left;
+			width: 25%;
+			border-right: 1px solid #e3e3e3;
+			padding: 25px 0;
+			font-size: 16px;
+			p{
+				color: #888;
+				font-size: 16px;
+				margin: 0;
+				padding: 5px 0;
+			}
+		}
+		.other-assets{
+			width: 75%;
+			float: left;
+			overflow-x: scroll;
+			&.overflow{
+				box-shadow: inset 0 0px 0 0 rgba(0,0,0,0.2),
+				inset -10px 0px 10px -10px rgba(0,0,0,0.2);
+			}
+		}
+		ul{
+			width: 1000px;
+			padding: 25px 0;
+			margin: 0 10px;
+			li{
+				display: inline;
+				margin-right: 10px;
+			}
+		}
+	}
+	.campaign__participants{
+		background:@graybg;
+		padding: 60px 0;
+		.participant-list__header{
+			overflow: auto;
+			margin-bottom: 20px;
+			input{
+				font-size: 16px;
+				padding-left: 5px;
+				width: 250px;
+				margin-top: 25px;
+			}
+		}
+		h2{
+			margin: 0;
+			line-height: 80px;
+		}
+		ul{
+			padding: 0;
+			margin-bottom: 30px;
+			li{
+				text-align: center;
+				list-style: none;
+				min-height: 300px;
+				&:hover{
+					.thumb__wrapper{
+						border-color:@white;
+					}
+				}
 
-        .thumb__wrapper{
-          width: 125px;
-          height: 125px;
-          .rounded(50%);
-          overflow:hidden;
-          margin: 0 auto;
-          border: 3px solid @graybg;
-          background: @white;
-          .transition(.25s, ease);
+				.thumb__wrapper{
+					width: 125px;
+					height: 125px;
+					.rounded(50%);
+					overflow:hidden;
+					margin: 0 auto;
+					border: 3px solid @graybg;
+					background: @white;
+					.transition(.25s, ease);
 
-          img{
-            vertical-align: middle;
-            position: relative;
-            width: 100%;
-            height: auto;
-            max-width: 125px;
-            max-height: 125px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-        .participant__assets{
-          li{
-            display: inline;
-            margin: 0 15px;
-            font-size: 18px;
-            position: relative;
-            
-            .badge {
-              background-color: @blue;
-              font-size: 10px;
-              padding: 2px 4px;
-              position: absolute;
-              top: -7px;
-              right: -10px;
-            }
-          }
-        }
-      }
-    }
-  }
+					img{
+						vertical-align: middle;
+						position: relative;
+						width: 100%;
+						height: auto;
+						max-width: 125px;
+						max-height: 125px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+				.participant__assets{
+					li{
+						display: inline;
+						margin: 0 15px;
+						font-size: 18px;
+						position: relative;
+						
+						.badge {
+							background-color: @blue;
+							font-size: 10px;
+							padding: 2px 4px;
+							position: absolute;
+							top: -7px;
+							right: -10px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
 // Campaign Archive/List Page
 .campaigns-list{
-  width: 100%;
-  position: relative;
-  padding-top: 30px;
-  
-  &--active {
-    background: @white;
-    border-top: 5px solid #d3d7dd;
-  }
-  &--inactive {
-    padding-bottom: 60px;
-  }
+	width: 100%;
+	position: relative;
+	padding-top: 30px;
+	
+	&--active {
+		background: @white;
+		border-top: 5px solid #d3d7dd;
+	}
+	&--inactive {
+		padding-bottom: 60px;
+	}
 
-  .participant-tag{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background:#ccc;
-    .rounded(50%);
-  }
-  .campaigns-list__item{
-    position: relative;
-    text-align:center;
+	.participant-tag{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background:#ccc;
+		.rounded(50%);
+	}
+	.campaigns-list__item{
+		position: relative;
+		text-align:center;
 
-    .item-wrapper {
-      .transition(.25s, ease);
-      
-      .rounded(5px);
-      min-height: 250px;
-      margin-bottom: 15px;
+		.item-wrapper {
+			.transition(.25s, ease);
+			
+			.rounded(5px);
+			min-height: 250px;
+			margin-bottom: 15px;
 
-      > ul{
-        padding: 0;
-        position: relative;
-        > li{
-          list-style:none;
-          display: inline-block;
-          position: relative;
-          margin-left: -8px;
-          width: 36px;
-          height: 36px;
-          .rounded(50%);
-          overflow: hidden;
-          box-shadow: 0 2px 5px rgba(0,0,0,.5);
-          background: @white;
+			> ul{
+				padding: 0;
+				position: relative;
+				> li{
+					list-style:none;
+					display: inline-block;
+					position: relative;
+					margin-left: -8px;
+					width: 36px;
+					height: 36px;
+					.rounded(50%);
+					overflow: hidden;
+					box-shadow: 0 2px 5px rgba(0,0,0,.5);
+					background: @white;
 
-          img{
-            vertical-align: middle;
-            width: 100%;
-            max-width: 36px;
-            max-height: 36px;
-            top: 50%;
-            transform: translateY(-50%);
-            position: relative;
-          }
+					img{
+						vertical-align: middle;
+						width: 100%;
+						max-width: 36px;
+						max-height: 36px;
+						top: 50%;
+						transform: translateY(-50%);
+						position: relative;
+					}
 
-        }
-      }
-    }
+				}
+			}
+		}
 
-    h3{
-      font-size: 18px;
-    }
-    i{
-      color:#ccc;
-    }
-    .product-tags{
-      span{
-        display: inline-block;
-        margin-right: 10px;
-        font-size: 11px;
-        margin-bottom: 5px;
-        background:#eaecef;
-        color:#888;
-        padding: 2px 5px;
-        .rounded(3px);
+		h3{
+			font-size: 18px;
+		}
+		i{
+			color:#ccc;
+		}
+		.product-tags{
+			span{
+				display: inline-block;
+				margin-right: 10px;
+				font-size: 11px;
+				margin-bottom: 5px;
+				background:#eaecef;
+				color:#888;
+				padding: 2px 5px;
+				.rounded(3px);
 
-      }
-    }
+			}
+		}
 
-  }
+	}
 }
 
  .campaign-list__title {
-  margin: 0;
+	margin: 0;
 }
 
 .campaign-list__empty {
-  display: none;
-  font-family: "SourceSansProLight",Arial,Helvetica,sans-serif;
-  font-size: 20px;
-  height: 250px;
-  padding: 20px 15px;
-  text-align: center;
-  .isEmpty & {
-    display: block;
-  }
+	display: none;
+	font-family: "SourceSansProLight",Arial,Helvetica,sans-serif;
+	font-size: 20px;
+	height: 250px;
+	padding: 20px 15px;
+	text-align: center;
+	.isEmpty & {
+		display: block;
+	}
 }

@@ -20,7 +20,6 @@
 			<div class="form-group">
 				<?php $mb->the_field('state'); ?>
 				<label>State</label>
-				<!-- codes taken from https://developer.linkedin.com/docs/reference/industry-codes -->
 				<select class="selectnice" name="<?php $mb->the_name(); ?>">
 					<option value=""></option>
 
@@ -37,7 +36,6 @@
 			<div class="form-group">
 				<?php $mb->the_field('country'); ?>
 				<label>Country</label>
-				<!-- codes taken from https://developer.linkedin.com/docs/reference/industry-codes -->
 				<select class="selectnice" name="<?php $mb->the_name(); ?>">
 					<option value=""></option>
 
