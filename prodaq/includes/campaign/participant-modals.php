@@ -16,7 +16,7 @@ if(!empty($researchParticipants)){
 							echo get_the_post_thumbnail($participantinfo->ID, 'participant-thumb');
 						}
 						else{
-							echo '<img width="100px" src="' .  get_asset_if_exists("/library/images/blank.jpg") . '">';
+							echo '<img width="100px" src="' . get_asset_if_exists("/library/images/blank.jpg") . '">';
 						}?>
 					</div>
 					<div class="participant-details">
