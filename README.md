@@ -17,7 +17,7 @@ This is a Wordpress theme. You will need to have a Wordpress site running to ins
 To make this easy to update and add new features, we have built the theme as a child theme that inherits from a parent theme. Any customization should be made in `prodaq-child`. This will allow us to make changes to the parent `prodaq` theme without overriding your customizations.
 
 ### Your Logo
-The default theme is pulling the logo files from `prodaq/library/images/newlogo.png` and `prodaq/library/images/newlogo-dark.png`. It is expecting these logos to be 120x37px. To use your logo, you may save your logo with these same dimensions and the same file names as above. Alternatively, you can alter the CSS to point to your file path instead of `newlogo.png` and `newlogo-dark.png`.
+The default theme is pulling the logo files from `prodaq/library/images/logo.png` and `prodaq/library/images/logo-dark.png`. It is expecting these logos to be 120x37px. To use your logo, you may save your logo with these same dimensions and the same file names as above. Alternatively, you can alter the CSS to point to your file path instead of `logo.png` and `logo-dark.png`.
 
 ## Other Information
 * All scripts and styles are registered and enqueued on a page/template basis within either `/library/bones.php` (for the boiler plate stuff) and `/library/_product/scripts.php` for all prodaq related items.

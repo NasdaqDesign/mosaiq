@@ -33,12 +33,13 @@ h4{
 }
 .page__header{
 	padding-top: 75px;
-	height: 200px;
+	min-height: 200px;
 	overflow:hidden;
 	background-color: @genericBlue;
 	position: relative;
 	h1{
-		line-height: 125px;
+		padding: 38px 0 37px;
+		line-height: 1.4;
 		color:@white;
 		font-family: @lightFontFamily;
 		font-size: 36px;
@@ -210,12 +211,23 @@ select.filters{
 	color: @white;
 	padding: 3px 6px;
 	
-	position: absolute;
-	right: 0;
-	top: 5px;
-	
 	&:hover {
 		background-color: darken(@link-color, 15%);
 		color: @white;
 	}
+	&:focus {
+		color: @white;
+	}
  }
+ 
+.error__content {
+	padding: 60px 0 80px;
+	font-size: 16px;
+	background: #fff;
+}
+
+.uivsux {
+	border: none;
+	height: 500px;
+	width: 100%;
+}

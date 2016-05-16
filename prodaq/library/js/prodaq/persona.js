@@ -23,26 +23,6 @@
 			$('#worldmap .region#'+target).attr('class', 'region');
 		});
 
-
-		$('.personas-list .filters').affix({
-				offset: {
-						top: $('.personas-list .filters').offset().top -105
-				}
-		});
-
-		// Some SVG Interactions, not used right now
-		// $('#worldmap .region').on('click', function(){
-		// 	var region = $(this).attr('ID');
-		// 	var activeClass = $(this).attr('class');
-		//
-		// 	if(activeClass.indexOf('active') !== -1){
-		// 		$(this).attr('class', 'region');
-		// 	}
-		// 	else{
-		// 		$(this).attr('class', 'region active');
-		// 	}
-		// });
-
 	});
 
 

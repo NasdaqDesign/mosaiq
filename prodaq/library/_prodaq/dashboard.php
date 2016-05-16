@@ -130,7 +130,6 @@
 					<li>_campaign_description - single</li>
 					<li>_campaign_design_team - single</li>
 					<li>_campaign_management_team - single</li>
-					<li>_campaign_product - single</li>
 					<li>_campaign_goals - array
 						<ul>
 							<li>goal - single</li>
@@ -154,7 +153,6 @@
 				<ul class="data-keys">
 					<li>_persona_role - single</li>
 					<li>_persona_type - single</li>
-					<li>_persona_url - single</li>
 					<li>_persona_quote - single</li>
 					<li>_persona_description - single</li>
 					<li>_persona_hero - single</li>
