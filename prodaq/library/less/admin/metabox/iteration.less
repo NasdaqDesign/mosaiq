@@ -1,0 +1,96 @@
+// Iteration Post Box
+#_iteration_data_metabox{
+	.inside{
+		padding: 0;
+		margin: 0;
+	}
+	.iteration__header{
+		background: @grayLightest;
+		padding: 15px;
+		border-bottom: 1px solid #ccc;
+		position: relative;
+		.form-group{
+			margin: 0;
+			.select2-container{
+				width: 200px;
+				margin-left: 15px;
+			}
+		}
+		a.help{
+			position: absolute;
+			right: 10px;
+			top: 20px;
+			display: block;
+			width: 24px;
+			height: 24px;
+			text-align: center;
+			line-height: 24px;
+			background: @gray;
+			.rounded(50%);
+			color: @white;
+		}
+	}
+	.iteration__pane{
+		display: none;
+		&.active{
+			display: block;
+		}
+		h2{
+			padding-left: 0;
+			font-size: 18px;
+		}
+		.docopy-images{
+			width: 100%;
+			box-shadow: none;
+			line-height: 40px;
+			height: 40px;
+			text-align: center;
+		}
+		.form-section{
+			position:relative;
+			.dodelete{
+				top: 0;
+				right: 0!important;
+				font-size: 16px;
+				background: @grayDark;
+				width: 30px;
+				text-align: center;
+				line-height: 30px!important;
+				height: 30px;
+			}
+			.preview-wrapper{
+				margin-top: 10px;
+			}
+			.form-group{
+				margin-top: 15px;
+			}
+
+		}
+		&.iteration__element{
+			padding: 0;
+			.nav-tabs{
+				padding-top: 0;
+				li{
+					&.active{
+						a{
+							border-top: 0;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#iteration-help{
+	.modal-body{
+		ul{
+			> li{
+				margin: 10px 0;
+				> ul{
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}

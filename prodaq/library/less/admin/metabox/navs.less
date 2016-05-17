@@ -1,0 +1,56 @@
+.postbox{
+	.nav-tabs{
+		background:@blue;
+		padding-top: 10px;
+		li{
+			a{
+				border: 0;
+				font-size: 16px;
+				margin-right: 0;
+				padding: 15px;
+				.rounded(0);
+				color: darken(@blue, 20%);
+				&:hover{
+					background: none;
+					color: @white;
+				}
+				&:focus{
+					outline: none;
+					background: transparent;
+					box-shadow: none;
+				}
+
+			}
+			&.pull-right{
+				margin-right: 15px;
+				color: @white;
+				.checkbox{
+					margin: 15px 0 0;
+					label{
+						font-size: 16px;
+						input{
+							margin-top: 2px;
+						}
+					}
+				}
+			}
+
+			&.active{
+				a{
+					border: 0;
+					color: @white;
+					background: transparent;
+					&:focus{
+						outline: none;
+						background: transparent;
+						box-shadow: none;
+					}
+				}
+				&:focus{
+					outline: none;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
