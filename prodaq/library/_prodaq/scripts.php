@@ -76,7 +76,6 @@ function prodaq_admin_scripts_and_styles() {
 	wp_register_style( 'bootstrap-styles', get_template_directory_uri() . '/library/less/prodaq/plugins/bootstrap.css', false, '3.3.5', 'all');
 	//for datepicker
 	wp_register_style( 'jquery-ui-style', get_template_directory_uri() . '/library/css/jquery-ui.min.css', false, '1.11.4', 'all' );
-	wp_register_style( 'jquery-ui-theme', get_template_directory_uri() . '/library/css/jquery-ui.theme.min.css', false, '1.11.4', 'all');
 	wp_register_style( 'select2', get_template_directory_uri() . '/library/css/select2/select2.css', false, '3.5.4', 'all' );
 	//http://ui.themepixels.com/select2-skins
 	wp_register_style( 'select2-skins', get_template_directory_uri() . '/library/css/select2/select2-skins.css', false, '3.5.2', 'all' );
@@ -107,7 +106,6 @@ function prodaq_admin_scripts_and_styles() {
 	wp_enqueue_style( 'select2' );
 	wp_enqueue_style( 'select2-skins' );
 	wp_enqueue_style( 'jquery-ui-style' );
-	wp_enqueue_style( 'jquery-ui-theme' );
 	wp_enqueue_style( 'admin-styles');
 
 	wp_enqueue_script('admin');
