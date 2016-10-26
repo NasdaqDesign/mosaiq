@@ -55,33 +55,7 @@
 				<?php $mb->the_field('summary'); ?>
 				<textarea class="ckeditor" id="personaSummary" name="<?php $mb->the_name(); ?>" rows="15"><?php $mb->the_value(); ?></textarea>
 			</div>
-			<div class="form-group">
-				<?php $mb->the_field('participants', WPALCHEMY_FIELD_HINT_SELECT_MULTI); ?>
-				<label>Associated Participant</label>
-				<select name="<?php $mb->the_name(); ?>" class="selectnice" multiple>
-					<?php
-						global $post;
-						$real_post = $post;
-						$args = array(
-							'post_type' => 'participant',
-							'post_status' => 'publish',
-							'orderby'=> 'title',
-							'order' => 'ASC',
-							'posts_per_page' => -1,
-							'caller_get_posts'=> 1
-						);
-						$my_query = null;
-						$my_query = new WP_Query($args);
-						if( $my_query->have_posts() ) {
-							while ($my_query->have_posts()) : $my_query->the_post();?>
-								<option value="<?php echo $post->ID; ?>"<?php $mb->the_select_state($post->ID); ?>><?php echo $post->post_title; ?></option>
-							<?php	endwhile;
-						}
-						wp_reset_query();
-						$post = $real_post;
-					?>
-				</select>
-			</div>
+			
 		</div>
 
 	</div>
