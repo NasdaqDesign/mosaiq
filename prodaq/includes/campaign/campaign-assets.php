@@ -39,6 +39,10 @@
 					}
 					else if($ext == 'pptx'){
 						$icon = 'pptx';
+					} else if($ext == 'mp4'){
+						$icon = 'video';
+					} else {
+						$icon = 'image';
 					}
 					echo '<li>
 						<a href="' . $asset['document'] . '"><span class="file-icon file-icon-s" data-type="'. $icon .'"></span> ' . $asset['title'] . '</a>

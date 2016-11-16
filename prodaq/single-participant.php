@@ -19,8 +19,8 @@ get_header(); ?>
 				<div class="col-md-3">
 
 					<div class="participant__thumb">
-						<?php if(has_post_thumbnail($participantinfo->ID)){
-							echo get_the_post_thumbnail($participantinfo->ID, 'participant-thumb');
+						<?php if(has_post_thumbnail(get_the_ID())){
+							echo get_the_post_thumbnail(get_the_ID(), 'participant-thumb');
 						}
 						else{
 							echo '<img width="130px" src="' . get_asset_if_exists("/library/images/blank.jpg") . '">';
