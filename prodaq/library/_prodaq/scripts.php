@@ -4,10 +4,10 @@ function prodaq_scripts_and_styles(){
 	global $post_type;
 	$libs = get_template_directory_uri() . '/library/js/libs/';
 	$prodaq = get_template_directory_uri() . '/library/js/prodaq/min/'; // minified folder from codekit
-	
+
 	wp_register_style( 'select2', get_template_directory_uri() . '/library/css/select2/select2.css', false, '3.5.4', 'all' );
 	wp_register_style( 'select2-skins', get_template_directory_uri() . '/library/css/select2/select2-skins.css', false, '3.5.2', 'all' );
-	
+
 	wp_enqueue_style( 'select2' );
 	wp_enqueue_style( 'select2-skins' );
 
@@ -67,7 +67,7 @@ add_action( 'wp_enqueue_scripts', 'prodaq_scripts_and_styles', 999 );
 // Admin scripts and styles... needs a bit of cleanup.
 function prodaq_admin_scripts_and_styles() {
 	global $post_type;
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	$post_id = isset($_GET['post']) ? $_GET['post'] : isset($_POST['post_ID']) ? $_POST['post_ID'] : false;
 	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
 	$libs = get_template_directory_uri() . '/library/js/libs/';

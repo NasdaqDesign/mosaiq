@@ -6,7 +6,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="campaign__meta">
-					<p><em><?php the_modified_date( $d, 'Last Updated '); ?> </em></p>
+					<p><em><?php the_modified_date( '', 'Last Updated '); ?> </em></p>
 				</div>
 			</div>
 		</div>

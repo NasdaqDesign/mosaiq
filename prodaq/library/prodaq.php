@@ -44,7 +44,7 @@ function pluralize($count, $singular, $plural = false)
 add_filter('show_admin_bar', '__return_false');
 
 // For checking page templates
-$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+$post_id = isset($_GET['post']) ? $_GET['post'] : isset($_POST['post_ID']) ? $_POST['post_ID'] : false;
 $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
 function ST4_get_featured_image($post_ID) {
@@ -84,7 +84,7 @@ function hide_editor() {
 	remove_post_type_support( 'persona', 'editor' );
 	remove_post_type_support( 'campaign', 'editor' );
 	remove_post_type_support( 'participant', 'editor' );
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	$post_id = isset($_GET['post']) ? $_GET['post'] : isset($_POST['post_ID']) ? $_POST['post_ID'] : false;
 	if( !isset( $post_id ) ) return;
 
 	// Get the name of the Page Template file.

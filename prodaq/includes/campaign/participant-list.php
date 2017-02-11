@@ -50,11 +50,11 @@
 								$transcriptCount++;
 							}
 						}
-					}
 					
 					renderAsset($recordingCount, 'fa-microphone', 'Recording');
 					renderAsset($transcriptCount, 'fa-file-text', 'Transcript');
 
+					}
 				echo '</ul>
 
 				</li>';
