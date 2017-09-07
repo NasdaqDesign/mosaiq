@@ -16,8 +16,8 @@ Template Name: Home Page Template
 				<?php endwhile; ?>
 				<?php endif; ?>
 				<ul>
-					<li><a href="/work/campaigns" class="btn btn-white">Research Campaigns</a></li>
-					<li><a href="/work/personas" class="btn btn-white">Personas</a></li>
+					<li><a href="<?php echo site_url(); ?>/campaigns" class="btn btn-white">Research Campaigns</a></li>
+					<li><a href="<?php echo site_url(); ?>/personas" class="btn btn-white">Personas</a></li>
 				</ul>
 			</div>
 		</div>

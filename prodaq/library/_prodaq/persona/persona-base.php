@@ -7,6 +7,7 @@
 	<li role="presentation"><a href="#goals" aria-controls="goals" role="tab" data-toggle="tab">Goals &amp; Pain Points</a></li>
 	<li role="presentation"><a href="#activities" aria-controls="activities" role="tab" data-toggle="tab">Activities &amp; Connections</a></li>
 	<li role="presentation"><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab">Additional Notes</a></li>
+	<li role="presentation"><a href="#participants" aria-controls="notes" role="tab" data-toggle="tab">Participants</a></li>
 </ul>
 
 <div class="tab-content">
@@ -23,5 +24,7 @@
 	<div role="tabpanel" class="tab-pane" id="notes">
 			<?php include('_notes.php'); ?>
 	</div>
-
+	<div role="tabpanel" class="tab-pane" id="participants">
+			<?php include('_participants.php'); ?>
+	</div>
 </div>
