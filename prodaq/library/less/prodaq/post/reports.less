@@ -1,0 +1,77 @@
+
+.single-report,
+.tax-story{
+	.image-wrapper{
+		position: relative;
+		.target{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 36px;
+			color: #e223db;
+		}
+	}
+	#report-wrapper{
+		opacity: 0;
+	}
+	.thumb__wrapper{
+		width: 75px;
+		height: 75px;
+		.rounded(50%);
+		overflow:hidden;
+		margin: 0 auto;
+		border: 3px solid @graybg;
+		background: @white;
+		.transition(.25s, ease);
+		.helper {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+		}
+		img{
+			vertical-align: middle;
+			width: 100%;
+			max-width: 75px;
+			max-height: 75px;
+		}
+	}
+
+	//Sections
+	#research,
+	#methodology,
+	#title{
+		ul{
+			padding-left: 15px;
+			li{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	#participants{
+		ul{
+			list-style: none;
+			margin: 20px 0;
+			padding: 0;
+			li{
+				text-align: center;
+			}
+		}
+	}
+	#themes{
+		ul{
+			padding: 0;
+			margin: 20px 0;
+			list-style: none;
+			li{
+				margin-bottom: 30px;
+				border-left: 2px dotted @blue;
+				padding-left: 20px;
+			}
+		}
+		h3{
+
+		}
+	}
+}

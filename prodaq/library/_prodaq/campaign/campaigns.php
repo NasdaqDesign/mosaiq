@@ -1,5 +1,6 @@
 <?php
 
+
 /* Register Research Campaign Post Type
 ---------------------------------------------------------------*/
 function daq_campaign() {
@@ -25,6 +26,7 @@ function daq_campaign() {
 		'menu_position' => 26,
 		'menu_icon' 	=> '',
 		'supports'      => array( 'title', 'thumbnail' ),
+		'taxonomies' 	=> array('post_tag'),
 		'has_archive'   => 'campaigns',
 		'rewrite' 		=> true
 	);
@@ -36,17 +38,17 @@ add_action( 'init', 'daq_campaign' );
 ---------------------------------------------------------------*/
 function my_taxonomies_campaign() {
 	$labels = array(
-		'name'              => _x( 'Campaign Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Categories' ),
-		'all_items'         => __( 'All Categories' ),
-		'parent_item'       => __( 'Parent Category' ),
-		'parent_item_colon' => __( 'Parent Category:' ),
-		'edit_item'         => __( 'Edit Category' ),
-		'update_item'       => __( 'Update Category' ),
-		'add_new_item'      => __( 'Add New Category' ),
-		'new_item_name'     => __( 'New Category' ),
-		'menu_name'         => __( 'Categories' ),
+		'name'              => _x( 'Campaign Products', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Campaign Product', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Campaign Products' ),
+		'all_items'         => __( 'All Campaign Products' ),
+		'parent_item'       => __( 'Parent Campaign Product' ),
+		'parent_item_colon' => __( 'Parent Campaign Product:' ),
+		'edit_item'         => __( 'Edit Campaign Product' ),
+		'update_item'       => __( 'Update Campaign Product' ),
+		'add_new_item'      => __( 'Add New Campaign Product' ),
+		'new_item_name'     => __( 'New Campaign Product' ),
+		'menu_name'         => __( 'Campaign Products' ),
 	);
 	$args = array(
 		'labels' => $labels,

@@ -38,17 +38,17 @@ add_action( 'init', 'daq_persona' );
 ---------------------------------------------------------------*/
 function my_taxonomies_persona() {
 	$labels = array(
-		'name'              => _x( 'Persona Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Categories' ),
-		'all_items'         => __( 'All Categories' ),
-		'parent_item'       => __( 'Parent Category' ),
-		'parent_item_colon' => __( 'Parent Category:' ),
-		'edit_item'         => __( 'Edit Category' ),
-		'update_item'       => __( 'Update Category' ),
-		'add_new_item'      => __( 'Add New Category' ),
-		'new_item_name'     => __( 'New Category' ),
-		'menu_name'         => __( 'Categories' ),
+		'name'              => _x( 'Persona Products', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Persona Product', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Persona Products' ),
+		'all_items'         => __( 'All Persona Products' ),
+		'parent_item'       => __( 'Parent Persona Product' ),
+		'parent_item_colon' => __( 'Parent Persona Product:' ),
+		'edit_item'         => __( 'Edit Persona Product' ),
+		'update_item'       => __( 'Update Persona Product' ),
+		'add_new_item'      => __( 'Add New Persona Product' ),
+		'new_item_name'     => __( 'New Persona Product' ),
+		'menu_name'         => __( 'Persona Products' ),
 	);
 	$args = array(
 		'labels' => $labels,

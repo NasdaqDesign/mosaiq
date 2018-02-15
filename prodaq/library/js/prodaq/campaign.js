@@ -9,7 +9,17 @@
 			$('.other-assets').addClass('overflow');
 			$('.other-assets ul').css('width', assetsLength + 100);
 		}
-		
+		$('.vimeo-media').fancybox({
+			 maxWidth	: 800,
+			 maxHeight	: 400,
+			 padding: 0,
+			 helpers : {
+				 overlay: {
+					 locked: false
+				 },
+				 media : {}
+			 }
+		});
 		$('body').on('shown.bs.modal', function(e){
 			//when a participant modal is opened up, go find any recordings
 			//and start to load them
@@ -24,8 +34,8 @@
 				//set data-loaded so we don't redo this again the next time the same modal is opened
 				$recordingContainer.attr('data-loaded', '');
 			});
-			
+
 		});
 	});
-	
+
 })(jQuery);

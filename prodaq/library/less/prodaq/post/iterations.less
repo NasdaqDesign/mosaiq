@@ -1,0 +1,135 @@
+// Story content
+.popover{
+	h3.popover-title{
+		font-size: 24px;
+		line-height: 32px;
+		background: @grayDarkest;
+		color: @white;
+		font-weight: 300;
+		border-bottom: 0;
+	}
+	.popover-content{
+		font-size: 18px;
+		line-height: 24px;
+		color: @grayDark;
+	}
+}
+.daq-story{
+
+	#story-wrapper{
+		opacity: 0;
+		#title{
+
+			h1{
+				font-size: 55px;
+			}
+			h2{
+				margin-bottom: 30px;
+			}
+		}
+		.fp-section{
+			h1{
+				color: @grayDarkest;
+				margin-bottom: 20px;
+				border-bottom: 2px solid @blue;
+				padding-bottom: 20px;
+			}
+			p{
+				font-size: 20px;
+				line-height: 32px;
+				color: @grayDark;
+				&.quote{
+					font-size: 16px;
+					line-height: 24px;
+					margin-bottom: 15px;
+				}
+			}
+			ul{
+				padding-left: 15px;
+				font-size: 20px;
+				line-height: 36px;
+				color: @grayDark;
+				list-style: none;
+				li:before {
+					content:'\2022';
+					display: block;
+					position: relative;
+					max-width: 0px;
+					max-height: 0px;
+					left: -20px;
+					top: -0px;
+					color: @blue;
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}
+
+.stories__list{
+	list-style: none;
+	padding-top: 80px;
+	margin-bottom: 0;
+	overflow: auto;
+	li{
+		float: left;
+		width: 100%/5;
+		padding: 20px;
+		text-align: center;
+		height: 350px;
+		a{
+			display: block;
+			position: relative;
+		}
+		&:hover{
+			a{
+				text-decoration: none;
+			}
+			.iteration-bg{
+				top: -10px;
+				left: -5px;
+				&:nth-of-type(2){
+					top: 15px;
+					left: 15px;
+				}
+				&:nth-of-type(3){
+
+				}
+			}
+		}
+	}
+	h3{
+		position: relative;
+		z-index: 10;
+		padding: 75px 15px 0;
+		margin: 0;
+		font-size: 24px;
+	}
+	h4{
+		position: relative;
+		z-index: 10;
+		font-size: 16px;
+	}
+
+
+	.iteration-bg{
+		z-index: 9;
+		position: absolute;
+		background: @white;
+		height: 250px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		margin: 0 auto;
+		box-shadow: 0 2px 5px rgba(20,20,20, 0.25);
+		.transition(all 0.25s ease);
+		&:nth-of-type(2){
+			top: 10px;
+			left: 10px;
+		}
+		&:nth-of-type(3){
+			top: 20px;
+			left: 20px;
+		}
+	}
+}

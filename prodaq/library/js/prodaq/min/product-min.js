@@ -1,0 +1,1 @@
+!function(a){a(document).ready(function(){a(".screenshot").fancybox({helpers:{overlay:{locked:!1}},padding:0}),a(".product__screens-wrapper").slick({dots:!0,accessibility:!0,infinite:!0,slidesToShow:5}),a(".product__screens").animate({opacity:1},250)})}(jQuery);

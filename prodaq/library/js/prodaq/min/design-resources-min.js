@@ -1,0 +1,1 @@
+!function(a){a(document).ready(function(){var b=a("body");a(".resource__wrapper .nav").affix({offset:{top:a(".resource__wrapper .nav").offset().top-105}}),b.scrollspy({target:".resource__wrapper .scrollspy",offset:50}),a("a.video").fancybox({maxWidth:800,maxHeight:400,padding:0,helpers:{overlay:{locked:!1},media:{}}})})}(jQuery);
