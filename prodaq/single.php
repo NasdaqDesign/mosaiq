@@ -1,6 +1,18 @@
-<?php get_header(); ?>
-			
-		<div class="container">  
+<?php
+/**
+ * The Template for displaying all single participants
+ *
+ * @package WordPress
+ */
+
+
+get_header(); ?>
+
+<header class="prodaq-header prodaq-header--sm prodaq-header--participant">
+	<!-- no need for anything here other than bg -->
+</header>
+
+		<div class="container">
 
 			<div id="content" class="clearfix row">
 
@@ -16,7 +28,7 @@
 								<div class="titlewrap clearfix">
 									<h1 class="single-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline vcard">
-										by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span> - 
+										by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span> -
 										<time class="updated" datetime="<?php get_the_time('Y-m-j') ?>"><?php echo get_the_time(get_option('date_format')) ?></time>
 										<span class="sticky-ind pull-right"><i class="fa fa-star"></i></span>
 									</p>
@@ -29,19 +41,19 @@
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-featured' ); ?>
 								<?php if ( $image[1] < '750' && has_post_thumbnail() ) { ?>
 									<section class="featured-content featured-img featured-img-bg" style="background: url('<?php echo $image[0]; ?>')">
-								<?php } // end if 
+								<?php } // end if
 								else { ?>
 									<section class="featured-content featured-img">
 										<?php if ( has_post_thumbnail() ) { ?>
 																				<a class="featured-img" href="<?php the_permalink(); ?>">
 																					<?php the_post_thumbnail( 'post-featured' ); ?>
 																				</a>
-																	<?php } // end if 
+																	<?php } // end if
 										else { ?>
 																		<hr>
 																	<?php } //end else?>
 												<?php } // end else ?>
-							<?php } // end if 
+							<?php } // end if
 							else { ?>
 								<section class="featured-content featured-img">
 							<?php } // end else ?>
@@ -55,7 +67,7 @@
 
 																				'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
 																				'after' => '</div>'
-																	) 
+																	)
 																); ?>
 							</section> <?php // end article section ?>
 

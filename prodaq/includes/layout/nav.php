@@ -29,10 +29,6 @@
 						<input type="search" placeholder="Search Participants, Companies, Titles" class="search__field" /><span class="search__icon" data-icon="search"></span>
 					</div>
 				</li>
-				<li>
-					<a href="./work/request-research" class="request">Request Research</a>
-
-				</li>
 			</ul>
 
 		</div>

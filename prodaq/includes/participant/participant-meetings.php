@@ -3,17 +3,17 @@
 	foreach($meetings as $meeting){
 		if(!array_key_exists($meeting['interview_campaign'], $groupedMeetings)){
 			$groupedMeetings[$meeting['interview_campaign']] = array();
-		} 
+		}
 		array_push($groupedMeetings[$meeting['interview_campaign']], $meeting);
 	}
-	
+
 	foreach($groupedMeetings as $meetingGroup){
 		$campaign_id = $meetingGroup[0]['interview_campaign'];
 		$campaign = get_post($campaign_id);
 		echo '<h2><a href="' . get_permalink($campaign_id) . '">' . $campaign->post_title . '</a></h2>'; ?>
 
 		<h3>Meetings</h3>
-		<ul class="participant__meetings">	
+		<ul class="participant__meetings">
 			<?php
 			foreach($meetingGroup as $meeting){
 				echo '<li>';
@@ -35,8 +35,23 @@
 					if(!empty($meeting['transcript'])){
 						echo '<a data-toggle="tooltip" data-placement="left" title="Download Transcript" href="' . $meeting['transcript'] . '"><i class="fa fa-file-text"></i></a>';
 					}
+					if(!empty($meeting['vimeo'])){
+						echo '<a class="vimeo-media" rel="vimeo" data-toggle="tooltip" data-placement="left" title="View Usability Video" href="' . $meeting['vimeo'] . '"><i class="fa fa-youtube-play"></i></a>';
+					}
+					if(isset($meeting['interview_campaign_summary'])){
+						if(is_array($meeting['interview_campaign_summary'])){
+							foreach($meeting['interview_campaign_summary'] as $summary){
+								echo '<a class="interview-summary" data-toggle="tooltip" data-placement="left" title="Interview Summary" href="#summary' . $summary . '"><i class="fa fa-sticky-note-o"></i></a>';
+							}
+						}
+						else{
+							echo '<a class="interview-summary" data-toggle="tooltip" data-placement="left" title="Interview Summary" href="#summary' . $meeting['interview_campaign_summary'] . '"><i class="fa fa-sticky-note-o"></i></a>';
+
+						}
+
+					}
 				echo '</div>';
-				
+
 				$theNotes = "<em>No notes currently available.</em>";
 				if(!empty($meeting['notes'])){
 					$theNotes = $meeting['notes'];
@@ -45,7 +60,7 @@
 				echo '</li>';
 			}?>
 		</ul>
-		<?php 
+		<?php
 		if(!empty($quotes)){
 			echo '<h3>Quotes</h3>';
 				foreach($quotes as $quote){
