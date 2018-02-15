@@ -2,87 +2,7 @@
 
 <h1><?php echo the_title(); ?></h1>
 
-<?php if(!empty($cic)){
-
-	$cicName = get_the_title();
-	$e = $post->AirpressCollection[0];
-	$query = new AirpressQuery("Customer Insights Council", "CIC");
-	$query->filterByFormula("{Participant Name}='$cicName'");
-
-	if (isset($e["Account Manager"])) {
-	  $amArray = $e["Account Manager"];
-		//Account Managers Table
-		$query = new AirpressQuery("Account Managers", "CIC");
-		$query->filterByFormula("RECORD_ID()='$amArray[0]'");
-		$amName = new AirpressCollection($query);
-		$amName->populateRelatedField("Account Manager", $query);
-	}
-
-	if (isset($e["Campaign History"])) {
-		//Campaigns Table
-		$query = new AirpressQuery("Campaigns", "CIC");
-		$query->filterByFormula("{Participant}='$cicName'");
-		$campaignName = new AirpressCollection($query);
-		$campaignName->populateRelatedField("Campaign History", $query);
-		$campaignVar = $campaignName[0]["Campaign Name"];
-	}
-
-	if(!empty($e["Title"])){
-		echo '<h4>'.$e["Title"].'</h4>';
-	}
-
-	if(!empty($e["Company"])){
-		echo '<h4>'.$e["Company"].'</h4>';
-	}
-	if(!empty($e["Industry"])){
-		echo '<h4>'.$e["Industry"].'</h4>';
-	}
-	if(!empty($e["Email"])){
-		echo '<dl>';
-		echo '<dt>Email</dt>';
-		echo '<dd>' . $e["Email"] . '</dd>' ;
-		echo '</dl>';
-	}
-	if(!empty($e["Location"])){
-		echo '<dl>';
-		echo '<dt>Location</dt>';
-		echo '<dd>' . $e["Location"] . '</dd>' ;
-		echo '</dl>';
-	}
-	if(!empty($amName[0]["Name"])){
-		echo '<dl>';
-		echo '<dt>Account Manager</dt>';
-		echo '<dd>' . $amName[0]["Name"] . '</dd>' ;
-		echo '</dl>';
-	}
-	if(!empty($e["Market Cap"])){
-		echo '<dl>';
-		echo '<dt>Market Cap</dt>';
-		echo '<dd>' . $e["Market Cap"] . '</dd>' ;
-		echo '</dl>';
-	}
-	if(!empty($e["Product(s) Used"])){
-		echo '<dl>';
-		echo '<dt>Product(s) Used</dt>';
-		echo '<dd>' . $e["Product(s) Used"] . '</dd>' ;
-		echo '</dl>';
-	}
-
-	if(!empty($e["Potential Campaign(s)"])){
-		echo '<dl>';
-		echo '<dt>Potential Campaigns</dt>';
-		echo '<dd>' . $e["Potential Campaign(s)"] . '</dd>' ;
-		echo '</dl>';
-	}
-
-	if(!empty($campaignVar)){
-		echo '<dl>';
-		echo '<dt>Campaign History</dt>';
-		echo '<dd>' . $campaignVar . '</dd>' ;
-		echo '</dl>';
-	}
-
-} else {
+<?php
 
 	if(isset($title)){
 		echo '<h4>' . $title . '</h4>';
@@ -172,5 +92,4 @@
 			<dd>'. strtoupper($region) .'</dd>
 		</dl>';
 	}
-
-}?>
+?>
