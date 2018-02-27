@@ -333,7 +333,7 @@ $(document).ready(function(){
 
 
 
-	$('select.selectnice').select2({
+	$('select.selectnice, select.cuztom-select').select2({
 		allowClear: true,
 		placeholder: 'Select',
 		containerCssClass: 'tpx-select2-container',

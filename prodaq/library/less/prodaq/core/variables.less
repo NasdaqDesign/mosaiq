@@ -10,64 +10,73 @@
 
 // Primary Colors
 // ---------------------------
-@black:               #000000;
-@white:               #ffffff;
-
+@black: #000000;
+@white: #ffffff;
 
 // Blue
 // ---------------------------
-@nasdaqBlue:          #0094b3; // Primary color - Links, buttons
-@blue:                #00bce3;
-@blueMid:             #4cd0eb;
-@blueLight:           #7fddf1;
-@blueLightest:        #bfeef8;
+@nasdaqBlue: #0094b3; // Primary color - Links, buttons
+@blue: #00bce3;
+@blueMid: #4cd0eb;
+@blueLight: #7fddf1;
+@blueLightest: #bfeef8;
 
 //Mulberry
 //---------------------------
-@mulberry: #A14685;
+@mulberry: #86086a;
 
 // Grays
 // ---------------------------
-@grayDarkestHeader:   #1D1E27; // ONLY used for the top level of navigation background and it's associated popovers
+@nasdaqGray: #1D1E25;
+@grayDarkest: #2d303a;
+@grayDarker: #474a53;
+@grayDark: #6B6d75;
+@gray: #96979c;
+@grayMid: #b6b7ba;
+@grayLight: #d5d6d8;
+@grayLighter: #eaeaeb;
+@grayLightest: #f4f4f5;
+@grayLightbg: #F4F4F5;
 
-@grayDarkest:         #2d303a;
-@grayDarker:          #474a53;
-@grayDark:            #6B6d75;
-@gray:                #96979c;
-@grayMid:             #b6b7ba;
-@grayLight:           #d5d6d8;
-@grayLighter:         #eaeaeb;
-@grayLightest:        #f4f4f5;
+//utility bar color
+@utilityBarColor: #2d3039;
 
 
 // Accent colors
-// ---------------------------2d
+// ---------------------------
+
 
 // Green
 // ------------
-@green:               #19b772;
-@greenMid:            #1dd182;
-@greenLight:          #85e6bb;
-@greenLightest:       #c9f4e1;
+@green: #19b772;
+@greenMid: #1dd182;
+@greenLight: #85e6bb;
+@greenLightest: #c9f4e1;
 
 
 // Red
 // ------------
-@red:                 #da353b;
-@redMid:              #f16669; //lighter alert. Can be used as background
-@redLight:            #f7acae;
-@redLightest:         #fbd7d8;
+@red: #da353b;
+@redMid: #f16669; //lighter alert. Can be used as background
+@redLight: #f7acae;
+@redLightest: #fbd7d8;
+
+@dangerHover: #f63a41;
 
 
 // Yellow
 // ------------
-@yellow:              #fecb00;
-@yellowMid:           #fed840;
-@yellowLight:         #fee57f;
-@yellowLightest:      #fff2bf;
+@yellow: #fecb00;
+@yellowMid: #fed840;
+@yellowLight: #fee57f;
+@yellowLightest: #fff2bf;
+
+// Marketing - Magenta
+// ------------
+@marketingMagenta: #ad208e;
 
 
-//Charting and Event Type Colors
+//Charting Colors
 //--------------
 @orange: #EA9134;
 @sunglow: #FFCC34;
@@ -77,15 +86,88 @@
 @royalblue: #0B5F93;
 @denimblueLight: #536E88;
 @denimblue: #3C516B;
-@periwinkle: #97B3CE;
+@periwinkle: #AFC3DC;
 @periwinkleLight: #C2D0E3;
 @magenta: #BE569F;
 @aqua: #41B49D;
 @kellygreen: #63A944;
-@purple: #63489D;
+@purple: #5a4099;
 @orchid: #896cfb;
+
+
+// NASDAQ logo
+// -------------------------
+@logo: "../img/nasd-logo.png";
+
+
+// CORE VARIABLES & DEFINITIONS
+// --------------------------------------------------
+
+// Scaffolding
+// -------------------------
+@bodyBackground: @white;
+@textColor: @nasdaqGray;
+@textColorMid: @grayDark;
+@textColorLight: #bdbdbd;
+@itemHover: #f6fdff;
+@popoverBorder: #b8b9bf;
+@warningText: darken(@yellow, 30%);
+@errorText: darken(@red, 5%);
+@successText: darken(@green, 12%);
+@infoText: @nasdaqBlue;
+
+// Links
+// -------------------------
+@linkColor: @nasdaqBlue;
+@linkColorHover: lighten(@linkColor, 10%);
+
+// Hr border color
+// -------------------------
+@hrBorder: @grayLight;
+
+
+// Component sizing
+// -------------------------
+
+@baseFontSizePx: 14px; // Main font size definition. Do not use besides in type.less
+@baseFontSize: 1rem;
+@baseLineHeight: 1.250em; // Changed from 18px
+@baseLineHeightPx: 20px; // to fix height problems. Convert me to match the em value defined above
+
+// Based on 14px font-size and 20px line-height ^^
+@fontSizeClose: 100% * 1.428; // ~20px
+@fontSizeLarge: 100% * 1.125; // ~18px
+@fontSizeSmall: 100% * 0.86; // ~12px
+@fontSizeMini: 100% * 0.7857; // ~11px
+
+@paddingLarge: 11px 19px; // 44px
+@paddingSmall: 2px 10px;  // 26px
+@paddingMini: 0 6px;   // 22px
+
+@baseBorderRadius: 4px;
+@borderRadiusLarge: 6px;
+@borderRadiusSmall: 3px;
+@paddingDefault: 7px 11px 6px; //for buttons and inputs
+
+// utility bar height
+@utilityBarHeight: 43px;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown: 1100;
+@zindexModal: 1050;
+@zindexModalBackdrop: 1040;
+@zindexFixedNavbar: 1030;
+@zindexTooltip: 1030;
+@zindexPopover: 1010;
+@zindexFullModal: 1000;
+@zindexPgPngToggle: 990;
 
 // Some others for site
 @darkBlue: #2f333b;
 @graybg: #e3e6ed;//#dadde5;
-@genericBlue: #304564;

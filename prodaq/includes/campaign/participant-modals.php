@@ -4,7 +4,9 @@ if(!empty($researchParticipants)){
 		$participant = explode(' -', $participant);
 		$participantinfo = get_page_by_title($participant[0], OBJECT, 'participant');
 		$participant_quotes = get_post_meta($participantinfo->ID, '_participant_quotes', TRUE);
-		$participant_meetings = get_post_meta($participantinfo->ID, '_participant_meetings', TRUE);?>
+		$participant_meetings = get_post_meta($participantinfo->ID, '_participant_meetings', TRUE);
+		$cic = get_post_meta($participantinfo->ID, '_participant_cic', TRUE);
+		?>
 
 	<div class="modal participant-modal fade" id="participant-<?php echo $participantinfo->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -21,6 +23,9 @@ if(!empty($researchParticipants)){
 					</div>
 					<div class="participant-details">
 						<h3 class="modal-title">
+							<?php if(!empty($cic)) {
+							echo '<i class="icon purple">check</i>';
+							} ?>
 							<?php echo $participantinfo->post_title;
 								$linked = get_post_meta($participantinfo->ID, '_participant_linkedin', TRUE);
 								if(!empty($linked)){
@@ -60,6 +65,27 @@ if(!empty($researchParticipants)){
 									<div class="modal-downloads col-md-6">
 										<a href="' . $meeting['transcript'] .'">Download Transcript</a>
 									</div>';
+								}
+								if(isset($meeting['vimeo'])){
+									echo '
+									<div class="modal-downloads col-md-6">
+										<a class="vimeo-media" href="' . $meeting['vimeo'] .'">View Usability Video</a>
+									</div>';
+								}
+								if(isset($meeting['interview_campaign_summary'])){
+									if(is_array($meeting['interview_campaign_summary'])){
+										echo '<div class="modal-downloads col-md-6">';
+										foreach($meeting['interview_campaign_summary'] as $summary){
+											echo '<a href="' . get_permalink($participantinfo->ID) .'#summary' . $summary . '">Interview Summary</a>';
+										}
+										echo '</div>';
+									}
+									else{
+										echo '
+										<div class="modal-downloads col-md-6">
+											<a href="' . get_permalink($participantinfo->ID) .'#summary' . $meeting['interview_campaign_summary'] . '">Interview Summary</a>
+										</div>';
+									}
 								}
 								if(!isset($meeting['notes']) && !isset($meeting['recording']) && !isset($meeting['transcript']) && !isset($meeting['interview_campaign_summary'])){
 									echo '<p><em>No assets currently available.</em></p>';

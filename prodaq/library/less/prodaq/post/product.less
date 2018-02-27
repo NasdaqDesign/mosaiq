@@ -1,0 +1,150 @@
+
+.product__content{
+	margin-bottom: 35px;
+	width: 100%;
+
+	ul{
+		padding: 0;
+		li{
+			list-style:none;
+			line-height:24px;
+			a{
+				color:@blue;
+			}
+		}
+	}
+	.product__header{
+		background: url('../images/loginbg.jpg') center;
+		ul{
+			z-index: 15;
+			position: relative;
+			margin-top: 50px;
+			li{
+				display: inline;
+				font-size: 20px;
+				margin: 0 10px;
+				a{
+					color: @white;
+					&:hover{
+						color: @blue;
+					}
+				}
+			}
+		}
+	}
+	.product__banner{
+		width: 100%;
+		position:relative;
+		background:@graybg;
+		padding: 50px 0;
+		li a{
+			display: block;
+		}
+		@media @i5{
+			height: auto;
+			padding-bottom: 15px;
+		}
+		img{
+			position:absolute;
+			right: 0;
+			top: 0;
+			height: 500px;
+			@media @i5{
+				display: none;
+			}
+		}
+		h1{
+			margin-top: 100px;
+			@media @i5{
+				margin-top: 40px;
+			}
+		}
+	}
+	.product__personas{
+		background:@graybg;
+		padding: 60px 0;
+		.persona-list__header{
+			overflow: auto;
+			margin-bottom: 20px;
+			input{
+				font-size: 16px;
+				padding-left: 5px;
+				width: 250px;
+				margin-top: 25px;
+			}
+		}
+		h2{
+			margin: 0;
+			line-height: 80px;
+		}
+		
+	}
+	.product__details{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background: @white;
+		ul.personas{
+			li{
+				list-style:none;
+				h3{
+					font-size: 18px;
+					text-align:center;
+				}
+				h4{
+					font-size: 14px;
+					text-align:center;
+				}
+				.thumb-wrapper{
+					width: 125px;
+					height: 125px;
+					.rounded(50%);
+					overflow:hidden;
+					margin: 0 auto;
+
+				}
+			}
+		}
+	}
+}
+
+.product__screens{
+	width: 100%;
+	overflow:hidden;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	background:@white;
+	border-bottom: 1px solid @graybg;
+	opacity: 0;
+	.product__screens-item{
+		padding: 5px;
+		img{
+			max-height: 140px;
+		}
+	}
+}
+
+.products-list{
+	padding: 0 0 50px;
+	.products-list__product{
+		position:relative;
+		overflow:hidden;
+		height: 400px;
+		width: 100%;
+		margin-bottom:0;
+		&:nth-of-type(even){
+			background:@white;
+		}
+		&:nth-of-type(odd){
+			background:@graybg;
+		}
+		h2{
+			margin-top: 75px;
+		}
+		img{
+			position:absolute;
+			right: 20px;
+			top: 0;
+			width: 500px;
+		}
+	}
+}

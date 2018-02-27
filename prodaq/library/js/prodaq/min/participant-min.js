@@ -1,0 +1,1 @@
+!function($){$(document).ready(function(){location.hash&&$(location.hash).modal("show"),$(".participant__assets-container").on("click",".interview-summary",function(a){$(this.hash).modal("show")}),$(".vimeo-media").fancybox({maxWidth:800,maxHeight:400,padding:0,helpers:{overlay:{locked:!1},media:{}}})})}(jQuery);

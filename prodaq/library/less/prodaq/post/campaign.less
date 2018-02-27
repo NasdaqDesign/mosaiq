@@ -2,59 +2,36 @@
 /** Campaign Related Styles **/
 
 // Campaign Single Page
-.campaign{
 
-	.campaign__header{
-		h1{
-			margin: 0;
-			@media @i5{
-				line-height: 36px;
-				font-size: 24px;
-			}
-		}
-		
-		.btn--edit {
-			position: absolute;
-			bottom: 10px;
-			z-index: 5;
-		}
-		.campaign__meta{
-			color: #ccc;
-			padding-top: 30px;
-			text-align:right;
-			z-index: 10;
-			position: relative;
-			@media @i5{
-				padding-top: 0;
-				margin-bottom: 15px;
-				text-align:left;
-			}
-			p{
-				font-size: 14px;
-				line-height: 24px;
-				margin: 0;
-			}
-			a{
-				background:darken(#e3e3e3, 20%);
-				padding: 5px 10px;
-				margin-left: 5px;
-				margin-top: 10px;
-				font-size: 11px;
-				text-transform:uppercase;
-				.rounded(5px);
-				color:@white;
+.campaign__meta{
+	color: #ccc;
+	text-align:right;
+	z-index: 10;
+	position: relative;
+	padding-top: 15px;
+	@media @i5{
+		padding-top: 0;
+		margin-bottom: 15px;
+		text-align:left;
+	}
+	p{
+		font-size: 14px;
+		line-height: 24px;
+		margin: 0;
+	}
+	a{
+		font-size: 13px;
+		text-decoration:none;
 
-				@media @i5{
-					margin-left: 0;
-					margin-right: 5px;
-				}
-				&:hover{
-					background:@blue;
-					text-decoration:none;
-				}
-			}
+		@media @i5{
+			margin-left: 0;
+			margin-right: 5px;
 		}
 	}
+}
+
+.campaign{
+
 	.campaign__overview{
 		padding: 60px 0 80px;
 		font-size: 16px;
@@ -62,6 +39,11 @@
 		h2{
 			margin: 0;
 			line-height: 80px;
+			display: inline-block;
+		}
+		h4 {
+			border-bottom: solid 1px @grayLight;
+			margin: 25px 0 15px 0;
 		}
 	}
 	.campaign__assets{
@@ -106,6 +88,8 @@
 	}
 	.campaign__participants{
 		background:@graybg;
+		position: relative;
+		clear: both;
 		padding: 60px 0;
 		.participant-list__header{
 			overflow: auto;
@@ -120,6 +104,7 @@
 		h2{
 			margin: 0;
 			line-height: 80px;
+			display: inline-block;
 		}
 		ul{
 			padding: 0;
@@ -133,35 +118,13 @@
 						border-color:@white;
 					}
 				}
-
-				.thumb__wrapper{
-					width: 125px;
-					height: 125px;
-					.rounded(50%);
-					overflow:hidden;
-					margin: 0 auto;
-					border: 3px solid @graybg;
-					background: @white;
-					.transition(.25s, ease);
-
-					img{
-						vertical-align: middle;
-						position: relative;
-						width: 100%;
-						height: auto;
-						max-width: 125px;
-						max-height: 125px;
-						top: 50%;
-						transform: translateY(-50%);
-					}
-				}
 				.participant__assets{
 					li{
 						display: inline;
 						margin: 0 15px;
 						font-size: 18px;
 						position: relative;
-						
+
 						.badge {
 							background-color: @blue;
 							font-size: 10px;
@@ -176,6 +139,26 @@
 		}
 	}
 }
+.thumb__wrapper{
+	width: 70px;
+	height: 70px;
+	.rounded(50%);
+	overflow:hidden;
+	border: 1px solid @graybg;
+	background: @white;
+	.transition(.25s, ease);
+
+	img{
+		vertical-align: middle;
+		position: relative;
+		width: 100%;
+		height: auto;
+		max-width: 70px;
+		max-height: 70px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
 
 
 // Campaign Archive/List Page
@@ -183,15 +166,9 @@
 	width: 100%;
 	position: relative;
 	padding-top: 30px;
-	
-	&--active {
-		background: @white;
-		border-top: 5px solid #d3d7dd;
-	}
 	&--inactive {
 		padding-bottom: 60px;
 	}
-
 	.participant-tag{
 		position: absolute;
 		width: 100px;
@@ -199,20 +176,27 @@
 		background:#ccc;
 		.rounded(50%);
 	}
-	.campaigns-list__item{
+	.campaigns-list__item {
 		position: relative;
-		text-align:center;
-
+		text-align: left;
+		margin-bottom: 15px;
+		p, li {
+			font-size: 14px;
+		}
 		.item-wrapper {
 			.transition(.25s, ease);
-			
 			.rounded(5px);
-			min-height: 250px;
+			padding: 15px;
+			padding-bottom: 15px;
+			height: 530px;
+			overflow-x: auto;
 			margin-bottom: 15px;
-
+			background: @white;
+			border-radius: 5px;
 			> ul{
 				padding: 0;
 				position: relative;
+				font-size: 14px;
 				> li{
 					list-style:none;
 					display: inline-block;
@@ -239,8 +223,20 @@
 			}
 		}
 
-		h3{
-			font-size: 18px;
+		h1{
+			font-size: 20px;
+			display: inline-block;
+			font-weight: 900;
+			margin-top: 5px;
+			padding-top: 0px;
+			width: 350px;
+		}
+		span {
+			font-size: 12px;
+		}
+		.participant__list {
+			margin-left: 15px;
+			position: relative;
 		}
 		i{
 			color:#ccc;
@@ -263,7 +259,8 @@
 }
 
  .campaign-list__title {
-	margin: 0;
+	margin: 0 0 0 15px;
+	padding-bottom: 15px;
 }
 
 .campaign-list__empty {
@@ -276,4 +273,119 @@
 	.isEmpty & {
 		display: block;
 	}
+}
+.nav-tabs {
+	padding-top: 10px;
+}
+.btn {
+    background: #ffffff;
+    border: 1px solid #0094b3;
+    color: #0094b3;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 7px 11px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.25em;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s linear 0.1s;
+}
+.btn-primary {
+		background: @nasdaqBlue;
+		color: @white;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 7px 11px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.25em;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s linear 0.1s;
+}
+.btn:hover {
+	color: @blueLight;
+}
+.right {
+	float: right;
+}
+.clear-both {
+	clear: both;
+	width: 100%;
+	position: relative;
+}
+.view__full-link {
+	width: 95%;
+	text-align: center;
+	display: block;
+	clear: both;
+	padding: 5px 0 15px 0;
+	border-top: solid 1px @grayLightest;
+	position: absolute;
+	bottom: 5px;
+	background: @white;
+	border-radius: 5px;
+}
+li.participant__count {
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	left: 15px;
+	width: inherit!important;
+	height: inherit!important;
+	-webkit-border-radius: inherit!important;
+	-moz-border-radius: inherit!important;
+	border-radius: inherit!important;
+	overflow: none!important;
+	box-shadow: none!important;
+	background:none!important;
+	font-size: 16px;
+}
+.empty-space {
+	background: @grayLightest;
+	position: relative;
+	width: 100%;
+	padding: 30px;
+	margin: 0 0 15px 0;
+}
+.--hide {
+  display: none;
+}
+.prodaq-main {
+	background: @grayLightbg;
+	position: relative;
+	min-height: 750px;
+	clear: both;
+}
+.row__tabs {
+	border-bottom: solid 2px @grayLightest;
+}
+.nav-tabs {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.script__files_list {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	li {
+		padding: 0 0 10px 0;
+	}
+}
+.clear-both {
+	width: 100%;
+	position: relative;
+	clear: both;
+}
+.icon.blue {
+	color: @nasdaqBlue;
 }

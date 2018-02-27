@@ -21,11 +21,12 @@ body.login {
 	You'll have to load your own images and mess
 	with the width and height.
 	*/
-	background: @genericBlue;
+	background:#2f333b url(../images/loginBG.jpg) no-repeat top center;
+	background-size: cover;
 	h1 a {
 		background: url(../images/login-logo.png) no-repeat top center; /* make sure to replace this! */
-		width: 100px;
-		height: 100px;
+		width: 300px;
+		height: 75px;
 		text-indent: -99991px;
 		overflow: hidden;
 		padding-bottom: 0;
@@ -64,7 +65,7 @@ body.login {
 			 -moz-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
 			box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
 	}
-	
+
 	#backtoblog a, #nav a { /* overriding some bad selectors in default wp */
 		color: #FFFFFF;
 	}

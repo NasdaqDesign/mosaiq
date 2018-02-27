@@ -82,12 +82,19 @@ html, body{
 			color: @blue;
 		}
 	}
-	
+
 	li.menu-icon-participant {
 		background: darken(@darkBlue, 4%);
 		border-top: 1px solid darken(@darkBlue, 8%);
+		div.wp-menu-image:before {
+			content: "\f307";
+			color: @blue;
+		}
+	}
+	li.menu-icon-cic {
+		background: darken(@darkBlue, 4%);
+		border-top: 1px solid darken(@darkBlue, 8%);
 		margin-top: 10px;
-
 		div.wp-menu-image:before {
 			content: "\f307";
 			color: @blue;
@@ -108,6 +115,13 @@ html, body{
 }
 
 
+
+.select2-container.cuztom-input.cuztom-select{
+	width: 200px;
+}
+
+
+
 .select2-results .select2-no-results{
 	background: #2d303a;
 }
@@ -125,4 +139,22 @@ html, body{
 	.select2-container{
 		width: 50%;
 	}
+}
+.show__hide-record {
+	float: right;
+	margin-top: 5px;
+}
+.other__details {
+	display: inline-block;
+}
+.persona__information {
+	display: inline-block;
+}
+.hide__text {
+	position: relative;
+	top: 3px;
+}
+.add__goal {
+	margin-bottom: 15px;
+	padding-top: 5px;
 }

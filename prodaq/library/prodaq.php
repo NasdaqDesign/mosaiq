@@ -1,7 +1,7 @@
 <?php
 /*
 Author: Prodaq
-URL: http://nasdaqdesign.com
+URL: nasdaqdesign.com
 
 Just pulling together all the various functions needed for Prodaq
 */
@@ -19,10 +19,26 @@ function CKEditor(){
 	echo '<script src="' . get_template_directory_uri() . '/library/js/libs/ckeditor/ckeditor.js"></script>';
 	echo '<script src="' . get_template_directory_uri() . '/library/js/libs/ckeditor/adapters/jquery.js"></script>';
 }
-add_action('admin_head', 'CKEditor');
 add_action('admin_head', 'FontAwesome_icons');
 add_action('wp_head', 'FontAwesome_icons');
+add_action( 'admin_print_scripts-post-new.php', 'cp_admin_script', 11 );
+add_action( 'admin_print_scripts-post.php', 'cp_admin_script', 11 );
+function cp_admin_script() {
+		global $post_type;
+		if('campaign' == $post_type || 'participant' == $post_type || 'persona' == $post_type || 'product' == $post_type || 'iteration' == $post_type){
+			add_action('admin_head', 'CKEditor');
+		}
+		if(is_admin()){
+			$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+			if( !isset( $post_id ) ) return;
 
+			$template_file = get_post_meta($post_id, '_wp_page_template', true);
+			if($template_file == 'templates/page-resources.php'){
+				add_action('admin_head', 'CKEditor');
+			}
+		}
+
+}
 
 register_sidebar(array(
 	'name'=> 'Events',
@@ -44,7 +60,7 @@ function pluralize($count, $singular, $plural = false)
 add_filter('show_admin_bar', '__return_false');
 
 // For checking page templates
-$post_id = isset($_GET['post']) ? $_GET['post'] : isset($_POST['post_ID']) ? $_POST['post_ID'] : false;
+$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
 function ST4_get_featured_image($post_ID) {
@@ -70,6 +86,14 @@ include( '_prodaq/participant/participants.php');
 include( '_prodaq/campaign/campaigns.php');
 /* Include Persona Custom Post and Metaboxes */
 include( '_prodaq/persona/personas.php');
+/* Include Product Custom Post and Metaboxes */
+include( '_prodaq/product/products.php');
+/* Include Iteration Custom Post and Metaboxes */
+include( '_prodaq/iteration/iterations.php');
+/* Include Iteration Custom Post and Metaboxes */
+include( '_prodaq/report/reports.php');
+/* Include Iteration Custom Post and Metaboxes */
+include( '_prodaq/quotes/quotes.php');
 
 function remove_prodaq_menus(){
 		if ( function_exists('remove_menu_page') ) {
@@ -78,13 +102,27 @@ function remove_prodaq_menus(){
 }
 add_action('admin_menu', 'remove_prodaq_menus');
 
+
+include( '_prodaq/cuztom/cuztom.php' ); // fallback for shittier metaboxes
+// Iframe page
+include( '_prodaq/iframe.php' );
+
+// Work with us page
+include( '_prodaq/work.php' );
+
+// Resources page
+// TODO: figure out better way to handle these
+include( '_prodaq/resources/resources.php');
+
+
 /* We dont' need the editor since we're using custom metaboxes */
 add_action( 'init', 'hide_editor' );
 function hide_editor() {
 	remove_post_type_support( 'persona', 'editor' );
 	remove_post_type_support( 'campaign', 'editor' );
+	remove_post_type_support( 'product', 'editor' );
 	remove_post_type_support( 'participant', 'editor' );
-	$post_id = isset($_GET['post']) ? $_GET['post'] : isset($_POST['post_ID']) ? $_POST['post_ID'] : false;
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 	if( !isset( $post_id ) ) return;
 
 	// Get the name of the Page Template file.
@@ -116,13 +154,15 @@ function change_default_title( $title ){
 		if ( 'campaign' == $screen->post_type ){
 				$title = 'Campaign Title';
 		}
+		if ( 'product' == $screen->post_type ){
+				$title = 'Product Name';
+		}
 		if ( 'participant' == $screen->post_type ){
 				$title = 'Participant Name';
 		}
 		return $title;
 }
 add_filter( 'enter_title_here', 'change_default_title' );
-
 function get_asset_if_exists($asset) {
 	if(file_exists(get_stylesheet_directory() . $asset)) {
 		return get_stylesheet_directory_uri() . $asset;
